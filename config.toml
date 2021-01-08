@@ -1,0 +1,5 @@
+baseURL = "https://nitya.github.io"
+languageCode = "en-us"
+title = "Cultivating Whimsy"
+theme = "ananke"
+publishdir = "docs"
