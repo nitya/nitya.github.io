@@ -22,6 +22,6 @@ The data powers a website that serves as the user-interface for human visitors. 
 
 The website should support standards like [OpenGraph](https://ogp.me/) that allow it to become a rich object in a social graph - and take advantage of capabilities like [oembed](https://oembed.com/) to support richer content presentation when the link is cited elsewhere.
 
-## 3. Agent Experience
+## Agent Experience
 
 The structured data formats should be accessible over a basic GitHub MCP server connection (generic) and the site should be equipped with an AGENTS.md (for coding agents) and an llms.txt (for search agents) along with custom skills and MCP servers to support effective usage. The repository may also have agentic workflows that can run async to keep data up-to-date or support other maintenance.
