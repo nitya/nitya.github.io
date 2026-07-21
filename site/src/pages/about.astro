@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../lib/profile.ts";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  description: profile.bio,
+  jobTitle: profile.headline,
+  address: profile.location,
+  url: "https://nitya.github.io/about",
+  sameAs: profile.sameAs,
+};
+
+function labelFor(url: string): string {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    const map: Record<string, string> = {
+      "github.com": "GitHub",
+      "linkedin.com": "LinkedIn",
+      "scholar.google.com": "Google Scholar",
+      "sessionize.com": "Sessionize",
+      "speakerdeck.com": "Speaker Deck",
+      "patents.google.com": "Google Patents",
+    };
+    return map[host] ?? host;
+  } catch {
+    return url;
+  }
+}
+---
+
+<BaseLayout
+  title={`About — ${profile.name}`}
+  description={profile.bio}
+  jsonLd={jsonLd}
+>
+  <section class="about">
+    <h1 class="gradient-text">About</h1>
+    <p class="headline">{profile.headline}</p>
+    <p class="loc">📍 {profile.location}</p>
+    <p class="bio">{profile.bio}</p>
+
+    <h2>Find me online</h2>
+    <ul class="links">
+      {
+        profile.sameAs.map((url) => (
+          <li>
+            <a href={url} target="_blank" rel="noopener me">
+              {labelFor(url)}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: 720px;
+  }
+  .about h1 {
+    font-size: 2.6rem;
+    margin: 0 0 0.4rem;
+  }
+  .headline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+  }
+  .loc {
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+  }
+  .bio {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  .about h2 {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+  }
+  .links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .links a:hover {
+    border-color: var(--brand);
+    text-decoration: none;
+  }
+</style>

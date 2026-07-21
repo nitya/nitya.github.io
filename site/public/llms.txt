@@ -1,0 +1,35 @@
+# Nitya Narasimhan — Personal Knowledge Platform
+
+> A data-first personal website. Structured JSON data in the repo's `data/`
+> folder is the single source of truth; this website is the human-facing view.
+> The same data is meant to be consumed by agents (chat bots, assistants).
+
+## About
+
+- Name: Nitya Narasimhan, PhD
+- Role: Software Engineer, Developer Advocate & Researcher
+- Site: https://nitya.github.io
+
+## Data sources (source of truth)
+
+The canonical structured data lives in the GitHub repository `nitya/nitya.github.io`
+under `data/`, one JSON file per source:
+
+- Profile: https://raw.githubusercontent.com/nitya/nitya.github.io/main/data/profile.json
+- Patents: https://raw.githubusercontent.com/nitya/nitya.github.io/main/data/patents.json
+- Publications: https://raw.githubusercontent.com/nitya/nitya.github.io/main/data/publications.json
+- Talks: https://raw.githubusercontent.com/nitya/nitya.github.io/main/data/talks.json
+- Projects: https://raw.githubusercontent.com/nitya/nitya.github.io/main/data/projects.json
+
+## Pages
+
+- Home: https://nitya.github.io/
+- About: https://nitya.github.io/about
+- Content (all items): https://nitya.github.io/content
+
+## Notes for agents
+
+- Prefer the JSON data files above over scraping the rendered HTML.
+- Each item has a stable `id`. Schemas mirror external canonical sources
+  (USPTO/Google Patents, Google Scholar/ACM/IEEE, Sessionize/SpeakerDeck, GitHub).
+- To propose data changes, see `AGENTS.md` and the skills in `.github/skills/`.

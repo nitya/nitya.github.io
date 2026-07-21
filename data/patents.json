@@ -1,0 +1,308 @@
+[
+  {
+    "id": "US7929010B2",
+    "title": "System and method for generating multimedia composites to track mobile events",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola Mobility, Inc.",
+    "filingDate": "2003-10-24",
+    "grantDate": "2011-04-19",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US7929010B2/en",
+    "tags": [
+      "media",
+      "multimedia"
+    ]
+  },
+  {
+    "id": "US8073498B2",
+    "title": "Method of optimizing power consumption in a wireless device",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola Solutions, Inc.",
+    "filingDate": "2008-04-30",
+    "grantDate": "2011-12-06",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US8073498B2/en",
+    "tags": [
+      "power-management",
+      "wireless"
+    ]
+  },
+  {
+    "id": "US8768744B2",
+    "title": "Method and apparatus for automated user review of media content in a mobile",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola Mobility Llc",
+    "filingDate": "2007-02-02",
+    "grantDate": "2014-07-01",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US8768744B2/en",
+    "tags": [
+      "media"
+    ]
+  },
+  {
+    "id": "US8943425B2",
+    "title": "Method and apparatus for context-aware delivery of informational content on",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Google Technology Holdings LLC",
+    "filingDate": "2007-10-30",
+    "grantDate": "2015-01-27",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US8943425B2/en",
+    "tags": [
+      "context-aware"
+    ]
+  },
+  {
+    "id": "US9596513B2",
+    "title": "Method and system for facilitating demand-driven distribution of content",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Google Technology Holdings LLC",
+    "filingDate": "2014-08-08",
+    "grantDate": "2017-03-14",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US9596513B2/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "EP2792156B1",
+    "title": "Supporting multiple attention-based, user-interaction modes",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "ARRIS Enterprises LLC",
+    "filingDate": "2012-11-16",
+    "grantDate": "2018-04-04",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/EP2792156B1/en",
+    "tags": [
+      "attention-aware"
+    ]
+  },
+  {
+    "id": "US10728618B2",
+    "title": "Attention-based advertisement scheduling in time-shifted content",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Google Llc",
+    "filingDate": "2018-07-18",
+    "grantDate": "2020-07-28",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US10728618B2/en",
+    "tags": [
+      "advertising",
+      "attention-aware"
+    ]
+  },
+  {
+    "id": "US7613156B2",
+    "title": "Method for energy efficient prospective peer discovery in an ad hoc network",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola, Inc.",
+    "filingDate": "2006-06-08",
+    "grantDate": "2009-11-03",
+    "status": "granted",
+    "url": "https://patents.google.com/patent/US7613156B2/en",
+    "tags": [
+      "peer-discovery",
+      "wireless",
+      "power-management"
+    ]
+  },
+  {
+    "id": "US20230244732A1",
+    "title": "Method and Apparatus that Collect and Uploads Implicit Analytic Data",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Google Technology Holdings LLC",
+    "filingDate": "2023-04-03",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20230244732A1/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "US20140143043A1",
+    "title": "Multi-screen advertisement correlation based on purchases",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "General Instrument Corporation",
+    "filingDate": "2012-11-21",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20140143043A1/en",
+    "tags": [
+      "advertising"
+    ]
+  },
+  {
+    "id": "US20130144709A1",
+    "title": "Cognitive-impact modeling for users having divided attention",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "General Instrument Corporation",
+    "filingDate": "2011-12-05",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20130144709A1/en",
+    "tags": [
+      "attention-aware"
+    ]
+  },
+  {
+    "id": "US20140019539A1",
+    "title": "Determination of influence scores",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "General Instrument Corporation",
+    "filingDate": "2012-07-16",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20140019539A1/en",
+    "tags": [
+      "social"
+    ]
+  },
+  {
+    "id": "US20100115596A1",
+    "title": "Method and System for Creating and Sharing Bookmarks of Media Content",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola, Inc.",
+    "filingDate": "2008-10-31",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20100115596A1/en",
+    "tags": [
+      "media",
+      "social-bookmarking"
+    ]
+  },
+  {
+    "id": "US20130132987A1",
+    "title": "Offering tasks to users based on their competence and on their current activity",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "General Instrument Corporation",
+    "filingDate": "2011-11-21",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20130132987A1/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "US20130145399A1",
+    "title": "Personal television channel",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "General Instrument Corporation",
+    "filingDate": "2011-12-05",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20130145399A1/en",
+    "tags": [
+      "television"
+    ]
+  },
+  {
+    "id": "US20090287714A1",
+    "title": "Method and Apparatus for Community-Based Comparison Shopping Based on Social",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola, Inc.",
+    "filingDate": "2008-05-19",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20090287714A1/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "US20090172555A1",
+    "title": "Method and apparatus for transparently mapping personalized alert preferences",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola, Inc.",
+    "filingDate": "2007-12-31",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20090172555A1/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "US20080244660A1",
+    "title": "Virtual set-top box tuner in content distribution system",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Motorola, Inc.",
+    "filingDate": "2007-03-26",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20080244660A1/en",
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "US20060266830A1",
+    "title": "Location-based recommendation system",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Horozov Tzvetan T",
+    "filingDate": "2005-05-31",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20060266830A1/en",
+    "tags": [
+      "recommendation"
+    ]
+  },
+  {
+    "id": "US20060095582A1",
+    "title": "Device and method for transferring apportioned data in a mobile ad hoc network",
+    "inventors": [
+      "Nitya Narasimhan"
+    ],
+    "assignee": "Narasimhan Nitya",
+    "filingDate": "2004-10-29",
+    "grantDate": null,
+    "status": "pending",
+    "url": "https://patents.google.com/patent/US20060095582A1/en",
+    "tags": [
+      "mobile"
+    ]
+  }
+]

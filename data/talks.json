@@ -1,0 +1,281 @@
+[
+  {
+    "id": "talk-2026-observe-optimize-protect-your-hosted-agents-in-mic",
+    "title": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
+    "event": "Microsoft Foundry",
+    "date": "2026-06-30",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
+    "videoUrl": null,
+    "description": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
+    "tags": [
+      "agents",
+      "microsoft-foundry",
+      "observability"
+    ]
+  },
+  {
+    "id": "talk-2026-efficient-model-customization-with-microsoft-found",
+    "title": "Efficient model customization with Microsoft Foundry - for Agentic AI",
+    "event": "Microsoft Foundry",
+    "date": "2026-01-22",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
+    "slidesUrl": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
+    "videoUrl": null,
+    "description": "Efficient model customization with Microsoft Foundry - for Agentic AI",
+    "tags": [
+      "agents",
+      "microsoft-foundry",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-from-smart-models-to-agent-factories",
+    "title": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
+    "event": "AI Summit NYC",
+    "date": "2025-12-18",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
+    "slidesUrl": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
+    "videoUrl": null,
+    "description": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
+    "tags": [
+      "agents",
+      "ai",
+      "keynote",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-continuous-ai-and-agentic-ai-workflows",
+    "title": "Continuous AI and Agentic AI Workflows",
+    "event": "Speaker Deck",
+    "date": "2025-12-18",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
+    "slidesUrl": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
+    "videoUrl": null,
+    "description": "Continuous AI and Agentic AI Workflows",
+    "tags": [
+      "agents",
+      "ai"
+    ]
+  },
+  {
+    "id": "talk-2025-learn-how-to-observe-manage-and-scale-agentic-ai-a",
+    "title": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
+    "event": "Microsoft Ignite",
+    "date": "2025-11-21",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
+    "slidesUrl": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
+    "videoUrl": null,
+    "description": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
+    "tags": [
+      "agents",
+      "ai",
+      "observability"
+    ]
+  },
+  {
+    "id": "talk-2025-safeguard-your-agents-with-ai-red-teaming-agent-in",
+    "title": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
+    "event": "Microsoft Ignite",
+    "date": "2025-11-21",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
+    "videoUrl": null,
+    "description": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
+    "tags": [
+      "agents",
+      "ai-red-teaming",
+      "microsoft-foundry"
+    ]
+  },
+  {
+    "id": "talk-2025-build-trustworthy-ai-with-systematic-evaluations-i",
+    "title": "[AITour 26] Build trustworthy AI with systematic evaluations in Azure AI Foundry",
+    "event": "Microsoft AI Tour",
+    "date": "2025-10-08",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/aitour-26-build-trustworthy-ai-with-systematic-evaluations-in-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/aitour-26-build-trustworthy-ai-with-systematic-evaluations-in-microsoft-foundry",
+    "videoUrl": null,
+    "description": "[AITour 26] Build trustworthy AI with systematic evaluations in Azure AI Foundry",
+    "tags": [
+      "microsoft-foundry",
+      "evaluation"
+    ]
+  },
+  {
+    "id": "talk-2025-automate-model-selection-with-microsoft-foundry-mod",
+    "title": "[AITour 26] Automate model selection with Azure AI Foundry Model Router",
+    "event": "Microsoft AI Tour",
+    "date": "2025-10-08",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/aitour-26-automate-model-selection-with-microsoft-foundry-model-router",
+    "slidesUrl": "https://speakerdeck.com/nitya/aitour-26-automate-model-selection-with-microsoft-foundry-model-router",
+    "videoUrl": null,
+    "description": "[AITour 26] Automate model selection with Azure AI Foundry Model Router",
+    "tags": [
+      "microsoft-foundry",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-efficient-model-customization-with-azure-ai-foundr",
+    "title": "[AITour 26] Efficient model customization with Azure AI Foundry",
+    "event": "Microsoft AI Tour",
+    "date": "2025-10-08",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/aitour-26-efficient-model-customization-with-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/aitour-26-efficient-model-customization-with-microsoft-foundry",
+    "videoUrl": null,
+    "description": "[AITour 26] Efficient model customization with Azure AI Foundry",
+    "tags": [
+      "microsoft-foundry",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-open-source-models-hugging-face",
+    "title": "Model Mondays S2E13: Open-Source Models & Hugging Face",
+    "event": "Model Mondays",
+    "date": "2025-09-15",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
+    "videoUrl": null,
+    "description": "Model Mondays S2E13: Open-Source Models & Hugging Face",
+    "tags": [
+      "models",
+      "open-source"
+    ]
+  },
+  {
+    "id": "talk-2025-models-observability",
+    "title": "Model Mondays S2E12: Models & Observability",
+    "event": "Model Mondays",
+    "date": "2025-09-08",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
+    "videoUrl": null,
+    "description": "Model Mondays S2E12: Models & Observability",
+    "tags": [
+      "models",
+      "observability"
+    ]
+  },
+  {
+    "id": "talk-2025-ai-foundry-speech-playground",
+    "title": "Model Mondays S2E11: AI Foundry Speech Playground",
+    "event": "Model Mondays",
+    "date": "2025-08-25",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
+    "videoUrl": null,
+    "description": "Model Mondays S2E11: AI Foundry Speech Playground",
+    "tags": [
+      "microsoft-foundry",
+      "models",
+      "speech"
+    ]
+  },
+  {
+    "id": "talk-2025-document-processing",
+    "title": "Model Mondays S2E10: Document Processing",
+    "event": "Model Mondays",
+    "date": "2025-08-22",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
+    "videoUrl": null,
+    "description": "Model Mondays S2E10: Document Processing",
+    "tags": [
+      "document-processing",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-ai-agents",
+    "title": "Model Mondays S2E09: AI Agents",
+    "event": "Model Mondays",
+    "date": "2025-08-11",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
+    "videoUrl": null,
+    "description": "Model Mondays S2E09: AI Agents",
+    "tags": [
+      "agents",
+      "ai",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-on-device-and-local-ai",
+    "title": "Model Mondays S2E08: On-Device and Local AI",
+    "event": "Model Mondays",
+    "date": "2025-08-04",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
+    "videoUrl": null,
+    "description": "Model Mondays S2E08: On-Device and Local AI",
+    "tags": [
+      "local-ai",
+      "models",
+      "on-device"
+    ]
+  },
+  {
+    "id": "talk-2025-ai-assisted-azure-development",
+    "title": "Model Mondays S2E07: AI-Assisted Azure Development",
+    "event": "Model Mondays",
+    "date": "2025-07-28",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
+    "videoUrl": null,
+    "description": "Model Mondays S2E07: AI-Assisted Azure Development",
+    "tags": [
+      "ai",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-research-innovation",
+    "title": "Model Mondays S2E06: Research & Innovation",
+    "event": "Model Mondays",
+    "date": "2025-07-21",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
+    "videoUrl": null,
+    "description": "Model Mondays S2E06: Research & Innovation",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-fine-tuning-distillation",
+    "title": "Model Mondays S2E05: Fine Tuning & Distillation",
+    "event": "Model Mondays",
+    "date": "2025-07-14",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
+    "videoUrl": null,
+    "description": "Model Mondays S2E05: Fine Tuning & Distillation",
+    "tags": [
+      "distillation",
+      "fine-tuning",
+      "models"
+    ]
+  }
+]

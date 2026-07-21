@@ -25,3 +25,34 @@ The website should support standards like [OpenGraph](https://ogp.me/) that allo
 ## Agent Experience
 
 The structured data formats should be accessible over a basic GitHub MCP server connection (generic) and the site should be equipped with an AGENTS.md (for coding agents) and an llms.txt (for search agents) along with custom skills and MCP servers to support effective usage. The repository may also have agentic workflows that can run async to keep data up-to-date or support other maintenance.
+
+## Repository layout
+
+```
+data/            Source of truth — JSON, one file per source
+  profile.json   patents.json  publications.json  talks.json  projects.json
+site/            Astro static site (a view of data/), deployed to GitHub Pages
+.github/
+  skills/        Runnable skills to maintain the data (add/update/research)
+  workflows/     GitHub Pages deploy workflow
+  PLAN.md        Phased build plan
+AGENTS.md        Guidance for coding agents
+```
+
+## Local development
+
+```bash
+cd site
+npm install
+npm run dev      # local preview at http://localhost:4321
+npm run build    # production build + sitemap (also validates data schemas)
+```
+
+Edit content by changing the JSON in `data/` — the site rebuilds from it. Or use
+the skills in `.github/skills/` (e.g. "add patent &lt;url&gt;").
+
+## Deployment
+
+Pushes to `main` build `site/` and publish to GitHub Pages via
+`.github/workflows/deploy.yml`. One-time setup: repo **Settings → Pages →
+Source: GitHub Actions**.

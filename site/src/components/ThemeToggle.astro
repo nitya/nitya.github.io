@@ -1,0 +1,48 @@
+---
+// Theme toggle. The inline script in BaseLayout applies the stored theme
+// before paint to avoid a flash; this button flips and persists it.
+---
+
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+  <span class="icon sun" aria-hidden="true">☀</span>
+  <span class="icon moon" aria-hidden="true">☾</span>
+</button>
+
+<style>
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    cursor: pointer;
+    color: var(--text);
+    font-size: 1.05rem;
+  }
+  .theme-toggle:hover {
+    border-color: var(--brand);
+  }
+  .icon {
+    grid-area: 1 / 1;
+  }
+  :root[data-theme="dark"] .sun,
+  :root:not([data-theme="dark"]) .moon {
+    display: none;
+  }
+</style>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const current =
+      document.documentElement.getAttribute("data-theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
+  });
+</script>

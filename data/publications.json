@@ -1,0 +1,352 @@
+[
+  {
+    "id": "pub-2010-interactive-visual-object-search-through-mutu",
+    "title": "Interactive visual object search through mutual information maximization",
+    "authors": [
+      "J Meng",
+      "J Yuan",
+      "Y Jiang",
+      "N Narasimhan",
+      "V Vasudevan",
+      "Y Wu"
+    ],
+    "venue": "Proceedings of the 18th ACM international conference on Multimedia, 1147-1150, 2010",
+    "year": 2010,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Interactive%20visual%20object%20search%20through%20mutual%20information%20maximization",
+    "citationCount": 31,
+    "tags": [
+      "computer-vision"
+    ]
+  },
+  {
+    "id": "pub-2010-tv-answers-using-the-wisdom-of-crowds-to-faci",
+    "title": "TV Answers-Using the Wisdom of Crowds to Facilitate Searches with Rich Media Context",
+    "authors": [
+      "N Narasimhan",
+      "J Wodka",
+      "P Wong",
+      "V Vasudevan"
+    ],
+    "venue": "2010 7th IEEE Consumer Communications and Networking Conference, 1-5, 2010",
+    "year": 2010,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=TV%20Answers-Using%20the%20Wisdom%20of%20Crowds%20to%20Facilitate%20Searches%20with%20Rich%20Media%20Context",
+    "citationCount": 3,
+    "tags": [
+      "media"
+    ]
+  },
+  {
+    "id": "pub-2009-investigating-the-potential-of-in-home-device",
+    "title": "Investigating the potential of in-home devices for improving medication adherence",
+    "authors": [
+      "YS Lee",
+      "J Tullio",
+      "N Narasimhan",
+      "P Kaushik",
+      "JR Engelsma",
+      "S Basapur"
+    ],
+    "venue": "2009 3rd International Conference on Pervasive Computing Technologies for\u00a0\u2026, 2009",
+    "year": 2009,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Investigating%20the%20potential%20of%20in-home%20devices%20for%20improving%20medication%20adherence",
+    "citationCount": 23,
+    "tags": [
+      "systems"
+    ]
+  },
+  {
+    "id": "pub-2009-is-this-urgent-exploring-time-sensitive-infor",
+    "title": "Is this urgent? Exploring time-sensitive information needs in collaborative question answering",
+    "authors": [
+      "Y Liu",
+      "N Narasimhan",
+      "V Vasudevan",
+      "E Agichtein"
+    ],
+    "venue": "Proceedings of the 32nd international ACM SIGIR conference on Research and\u00a0\u2026, 2009",
+    "year": 2009,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Is%20this%20urgent%3F%20Exploring%20time-sensitive%20information%20needs%20in%20collaborative%20question%20answering",
+    "citationCount": 17,
+    "tags": [
+      "systems"
+    ]
+  },
+  {
+    "id": "pub-2009-tv-clips-using-social-bookmarking-for-content",
+    "title": "TV clips: using social bookmarking for content discovery in a fragmented TV ecosystem",
+    "authors": [
+      "N Narasimhan",
+      "T Horozov",
+      "J Wodka",
+      "J Wickramasuriya",
+      "V Vasudevan"
+    ],
+    "venue": "Proceedings of the 8th international conference on mobile and ubiquitous\u00a0\u2026, 2009",
+    "year": 2009,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=TV%20clips%3A%20using%20social%20bookmarking%20for%20content%20discovery%20in%20a%20fragmented%20TV%20ecosystem",
+    "citationCount": 10,
+    "tags": [
+      "media",
+      "social"
+    ]
+  },
+  {
+    "id": "pub-2008-vstore-efficiently-storing-virtualized-state-",
+    "title": "Vstore: efficiently storing virtualized state across mobile devices",
+    "authors": [
+      "B Seshasayee",
+      "N Narasimhan",
+      "A Bijlani",
+      "A Pai",
+      "K Schwan"
+    ],
+    "venue": "Proceedings of the First Workshop on Virtualization in Mobile Computing, 43-47, 2008",
+    "year": 2008,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Vstore%3A%20efficiently%20storing%20virtualized%20state%20across%20mobile%20devices",
+    "citationCount": 8,
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "pub-2006-using-location-for-personalized-poi-recommend",
+    "title": "Using location for personalized POI recommendations in mobile environments",
+    "authors": [
+      "T Horozov",
+      "N Narasimhan",
+      "V Vasudevan"
+    ],
+    "venue": "International Symposium on Applications and the Internet (SAINT'06), 6 pp.-129, 2006",
+    "year": 2006,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Using%20location%20for%20personalized%20POI%20recommendations%20in%20mobile%20environments",
+    "citationCount": 330,
+    "tags": [
+      "location",
+      "mobile",
+      "recommendation"
+    ]
+  },
+  {
+    "id": "pub-2006-ambient-mobile-communications",
+    "title": "Ambient mobile communications",
+    "authors": [
+      "F Bentley",
+      "P Kaushik",
+      "N Narasimhan",
+      "A Dhiraj"
+    ],
+    "venue": "CHI 2006 Workshop on Mobile Social Software, 14-16, 2006",
+    "year": 2006,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Ambient%20mobile%20communications",
+    "citationCount": 13,
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "pub-2006-appbus-mobile-device-application-collaboratio",
+    "title": "AppBus: Mobile Device Application Collaboration via Short Term Memory.",
+    "authors": [
+      "C Janssen",
+      "M Pearce",
+      "S Kollipara",
+      "N Narasimhan"
+    ],
+    "venue": "J. Softw. 1 (2), 40-47, 2006",
+    "year": 2006,
+    "type": "journal",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=AppBus%3A%20Mobile%20Device%20Application%20Collaboration%20via%20Short%20Term%20Memory.",
+    "citationCount": 4,
+    "tags": [
+      "mobile"
+    ]
+  },
+  {
+    "id": "pub-2005-muse-middleware-for-using-sensors-effectively",
+    "title": "Muse: middleware for using sensors effectively",
+    "authors": [
+      "LJ Rittle",
+      "V Vasudevan",
+      "N Narasimhan",
+      "C Jia"
+    ],
+    "venue": "Proceedings of the International Conference on Networked Sensing Systems\u00a0\u2026, 2005",
+    "year": 2005,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Muse%3A%20middleware%20for%20using%20sensors%20effectively",
+    "citationCount": 6,
+    "tags": [
+      "sensors"
+    ]
+  },
+  {
+    "id": "pub-2003-mobiman-bringing-scripted-agents-to-wireless-",
+    "title": "MobiMan: bringing scripted agents to wireless terminal management",
+    "authors": [
+      "V Vasudevan",
+      "S Adwankar",
+      "N Narasimhan"
+    ],
+    "venue": "International Workshop on Distributed Systems: Operations and Management, 68-81, 2003",
+    "year": 2003,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=MobiMan%3A%20bringing%20scripted%20agents%20to%20wireless%20terminal%20management",
+    "citationCount": 3,
+    "tags": [
+      "distributed-systems",
+      "mobile-agents"
+    ]
+  },
+  {
+    "id": "pub-2001-transparent-fault-tolerance-for-java-remote-m",
+    "title": "Transparent fault tolerance for Java remote method invocation",
+    "authors": [
+      "N Narasimhan"
+    ],
+    "venue": "University of California, Santa Barbara, 2001",
+    "year": 2001,
+    "type": "book",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Transparent%20fault%20tolerance%20for%20Java%20remote%20method%20invocation",
+    "citationCount": 16,
+    "tags": [
+      "fault-tolerance",
+      "java"
+    ]
+  },
+  {
+    "id": "pub-2001-interceptors-for-java-remote-method-invocatio",
+    "title": "Interceptors for Java remote method invocation",
+    "authors": [
+      "N Narasimhan",
+      "LE Moser",
+      "PM Melliar\u2010Smith"
+    ],
+    "venue": "Concurrency and Computation: Practice and Experience 13 (8\u20109), 755-774, 2001",
+    "year": 2001,
+    "type": "journal",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Interceptors%20for%20Java%20remote%20method%20invocation",
+    "citationCount": 12,
+    "tags": [
+      "java"
+    ]
+  },
+  {
+    "id": "pub-2000-transparent-consistent-replication-of-java-rm",
+    "title": "Transparent consistent replication of Java RMI objects",
+    "authors": [
+      "N Narasimhan",
+      "LE Moser",
+      "PM Melliar-Smith"
+    ],
+    "venue": "Proceedings DOA'00. International Symposium on Distributed Objects and\u00a0\u2026, 2000",
+    "year": 2000,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Transparent%20consistent%20replication%20of%20Java%20RMI%20objects",
+    "citationCount": 46,
+    "tags": [
+      "distributed-systems",
+      "fault-tolerance",
+      "java"
+    ]
+  },
+  {
+    "id": "pub-2000-the-securegroup-group-communication-system",
+    "title": "The SecureGroup group communication system",
+    "authors": [
+      "LE Moser",
+      "PM Melliar-Smith",
+      "N Narasimhan"
+    ],
+    "venue": "Proceedings DARPA Information Survivability Conference and Exposition\u00a0\u2026, 2000",
+    "year": 2000,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=The%20SecureGroup%20group%20communication%20system",
+    "citationCount": 21,
+    "tags": [
+      "distributed-systems",
+      "security"
+    ]
+  },
+  {
+    "id": "pub-2000-interception-in-the-aroma-system",
+    "title": "Interception in the Aroma system",
+    "authors": [
+      "N Narasimhan",
+      "LE Moser",
+      "PM Melliar-Smith"
+    ],
+    "venue": "Proceedings of the ACM 2000 conference on Java Grande, 107-115, 2000",
+    "year": 2000,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=Interception%20in%20the%20Aroma%20system",
+    "citationCount": 19,
+    "tags": [
+      "systems"
+    ]
+  },
+  {
+    "id": "pub-1999-magnet-mobile-agents-for-networked-electronic",
+    "title": "MAgNET: mobile agents for networked electronic trading",
+    "authors": [
+      "P Dasgupta",
+      "N Narasimhan",
+      "LE Moser",
+      "PM Melliar-Smith"
+    ],
+    "venue": "IEEE Transactions on knowledge and data engineering 11 (4), 509-525, 1999",
+    "year": 1999,
+    "type": "journal",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=MAgNET%3A%20mobile%20agents%20for%20networked%20electronic%20trading",
+    "citationCount": 286,
+    "tags": [
+      "mobile",
+      "mobile-agents"
+    ]
+  },
+  {
+    "id": "pub-1998-a-supplier-driven-electronic-marketplace-usin",
+    "title": "A supplier driven electronic marketplace using mobile agents",
+    "authors": [
+      "P Dasgupta",
+      "N Narasimhan",
+      "LE Moser",
+      "PM Melliar-Smith"
+    ],
+    "venue": "Proceedings of the First International Conference on Telecommunications and\u00a0\u2026, 1998",
+    "year": 1998,
+    "type": "conference",
+    "doi": null,
+    "url": "https://scholar.google.com/scholar?q=A%20supplier%20driven%20electronic%20marketplace%20using%20mobile%20agents",
+    "citationCount": 30,
+    "tags": [
+      "e-commerce",
+      "mobile",
+      "mobile-agents"
+    ]
+  }
+]

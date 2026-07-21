@@ -1,0 +1,77 @@
+---
+import { profile } from "../lib/profile.ts";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/content", label: "Content" },
+  { href: "/about", label: "About" },
+];
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
+---
+
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="/" class="brand gradient-text">{profile.name}</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        {
+          links.map((l) => (
+            <li>
+              <a href={l.href} class={isActive(l.href) ? "active" : ""}>
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <slot />
+    </div>
+  </div>
+</nav>
+
+<style>
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+  .brand:hover {
+    text-decoration: none;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .nav-links a.active,
+  .nav-links a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+</style>

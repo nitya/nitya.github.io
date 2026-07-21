@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Filters from "../../components/Filters.astro";
+import Card from "../../components/Card.astro";
+import { getAllContentItems } from "../../lib/content.ts";
+import { profile } from "../../lib/profile.ts";
+
+const items = await getAllContentItems();
+const allTags = [...new Set(items.flatMap((i) => i.tags))].sort();
+
+const description =
+  "Browse patents, publications, talks, and projects — one card per item, searchable, sortable, and filterable.";
+
+// Per-item structured data (schema.org) for SEO.
+const schemaType: Record<string, string> = {
+  patent: "CreativeWork",
+  publication: "ScholarlyArticle",
+  talk: "Event",
+  project: "SoftwareSourceCode",
+};
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: items.map((item, idx) => ({
+    "@type": "ListItem",
+    position: idx + 1,
+    url: item.url,
+    item: {
+      "@type": schemaType[item.type] ?? "CreativeWork",
+      name: item.title,
+      url: item.url,
+      ...(item.description ? { description: item.description } : {}),
+      ...(item.date ? { datePublished: item.date } : {}),
+      author: { "@type": "Person", name: profile.name },
+    },
+  })),
+};
+---
+
+<BaseLayout title={`Content · ${profile.name}`} description={description} jsonLd={jsonLd}>
+  <header class="page-head">
+    <h1 class="gradient-text">Content</h1>
+    <p>{description}</p>
+  </header>
+
+  <Filters allTags={allTags} />
+
+  <p id="result-count" class="result-count"></p>
+
+  <div id="gallery" class="gallery">
+    {items.map((item) => <Card item={item} />)}
+  </div>
+
+  <p id="empty" class="empty" hidden>No items match your filters.</p>
+
+  <nav id="pager" class="pager" aria-label="Pagination"></nav>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-bottom: 1.5rem;
+  }
+  .page-head h1 {
+    font-size: 2.4rem;
+    margin: 0 0 0.3rem;
+  }
+  .page-head p {
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .result-count {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 0 0 1rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.1rem;
+  }
+  .empty {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 3rem 0;
+  }
+  .pager {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .pager button {
+    min-width: 40px;
+    padding: 0.45rem 0.7rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .pager button.active {
+    background: var(--gradient);
+    color: #fff;
+    border-color: transparent;
+  }
+  .pager button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+</style>
+
+<script>
+  const PAGE_SIZE = 9;
+  const gallery = document.getElementById("gallery")!;
+  const cards = Array.from(
+    gallery.querySelectorAll<HTMLElement>(".content-card")
+  );
+  const search = document.getElementById("search") as HTMLInputElement;
+  const sortSel = document.getElementById("sort") as HTMLSelectElement;
+  const tagSel = document.getElementById("tag") as HTMLSelectElement | null;
+  const typeBtns = Array.from(
+    document.querySelectorAll<HTMLButtonElement>(".type-btn")
+  );
+  const pager = document.getElementById("pager")!;
+  const empty = document.getElementById("empty")!;
+  const countEl = document.getElementById("result-count")!;
+
+  let activeType = "all";
+  let page = 1;
+
+  const text = (el: HTMLElement) =>
+    `${el.dataset.title ?? ""} ${el.dataset.tags ?? ""} ${el.textContent ?? ""}`.toLowerCase();
+
+  function filtered(): HTMLElement[] {
+    const q = search.value.trim().toLowerCase();
+    const tag = tagSel?.value ?? "all";
+    return cards.filter((c) => {
+      if (activeType !== "all" && c.dataset.type !== activeType) return false;
+      if (tag !== "all" && !(c.dataset.tags ?? "").split(" ").includes(tag))
+        return false;
+      if (q && !text(c).includes(q)) return false;
+      return true;
+    });
+  }
+
+  function sorted(list: HTMLElement[]): HTMLElement[] {
+    const [key, dir] = sortSel.value.split("-");
+    const mult = dir === "asc" ? 1 : -1;
+    return [...list].sort((a, b) => {
+      let av = "";
+      let bv = "";
+      if (key === "date") {
+        av = a.dataset.date ?? "";
+        bv = b.dataset.date ?? "";
+      } else if (key === "title") {
+        av = a.dataset.title ?? "";
+        bv = b.dataset.title ?? "";
+      } else {
+        av = a.dataset.type ?? "";
+        bv = b.dataset.type ?? "";
+      }
+      return av.localeCompare(bv) * mult;
+    });
+  }
+
+  function render() {
+    const list = sorted(filtered());
+    const pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+    if (page > pages) page = pages;
+    const start = (page - 1) * PAGE_SIZE;
+    const visible = new Set(list.slice(start, start + PAGE_SIZE));
+
+    cards.forEach((c) => {
+      c.style.display = visible.has(c) ? "" : "none";
+    });
+    // Reorder DOM to reflect sort for the visible slice.
+    list.forEach((c) => gallery.appendChild(c));
+
+    empty.hidden = list.length !== 0;
+    countEl.textContent = `${list.length} item${list.length === 1 ? "" : "s"}`;
+    renderPager(pages);
+  }
+
+  function renderPager(pages: number) {
+    pager.innerHTML = "";
+    if (pages <= 1) return;
+    const mk = (label: string, target: number, opts: { disabled?: boolean; active?: boolean } = {}) => {
+      const b = document.createElement("button");
+      b.textContent = label;
+      if (opts.disabled) b.disabled = true;
+      if (opts.active) b.classList.add("active");
+      b.addEventListener("click", () => {
+        page = target;
+        render();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      pager.appendChild(b);
+    };
+    mk("‹", page - 1, { disabled: page === 1 });
+    for (let i = 1; i <= pages; i++) mk(String(i), i, { active: i === page });
+    mk("›", page + 1, { disabled: page === pages });
+  }
+
+  function reset() {
+    page = 1;
+    render();
+  }
+
+  search.addEventListener("input", reset);
+  sortSel.addEventListener("change", reset);
+  tagSel?.addEventListener("change", reset);
+  typeBtns.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      typeBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeType = btn.dataset.type ?? "all";
+      reset();
+    })
+  );
+
+  // Honor ?tag= and ?type= query params so links from other pages pre-filter.
+  const params = new URLSearchParams(window.location.search);
+  const initialType = params.get("type");
+  if (initialType && typeBtns.some((b) => b.dataset.type === initialType)) {
+    activeType = initialType;
+    typeBtns.forEach((b) =>
+      b.classList.toggle("active", b.dataset.type === initialType)
+    );
+  }
+  const initialTag = params.get("tag");
+  if (initialTag && tagSel) {
+    const match = Array.from(tagSel.options).find((o) => o.value === initialTag);
+    if (match) tagSel.value = initialTag;
+  }
+
+  render();
+</script>

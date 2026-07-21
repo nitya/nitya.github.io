@@ -1,0 +1,96 @@
+---
+export interface Props {
+  allTags: string[];
+}
+const { allTags } = Astro.props;
+const types = [
+  { value: "all", label: "All" },
+  { value: "patent", label: "Patents" },
+  { value: "publication", label: "Publications" },
+  { value: "talk", label: "Talks" },
+  { value: "project", label: "Projects" },
+];
+---
+
+<div class="filters card">
+  <div class="row">
+    <input
+      id="search"
+      type="search"
+      placeholder="Search titles, descriptions, tags…"
+      autocomplete="off"
+    />
+    <select id="sort" aria-label="Sort">
+      <option value="date-desc">Newest first</option>
+      <option value="date-asc">Oldest first</option>
+      <option value="title-asc">Title A–Z</option>
+      <option value="title-desc">Title Z–A</option>
+      <option value="type-asc">Type</option>
+    </select>
+  </div>
+  <div class="row types" role="tablist">
+    {
+      types.map((t) => (
+        <button
+          class={`type-btn${t.value === "all" ? " active" : ""}`}
+          data-type={t.value}
+        >
+          {t.label}
+        </button>
+      ))
+    }
+  </div>
+  {
+    allTags.length > 0 && (
+      <div class="row tagfilter">
+        <label for="tag">Tag:</label>
+        <select id="tag" aria-label="Filter by tag">
+          <option value="all">All tags</option>
+          {allTags.map((t) => (
+            <option value={t}>#{t}</option>
+          ))}
+        </select>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .filters {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #search {
+    flex: 1 1 260px;
+  }
+  .types {
+    gap: 0.4rem;
+  }
+  .type-btn {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .type-btn.active {
+    background: var(--gradient);
+    color: #fff;
+    border-color: transparent;
+  }
+  .tagfilter label {
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+</style>

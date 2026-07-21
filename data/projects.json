@@ -1,0 +1,243 @@
+[
+  {
+    "id": "proj-model-mondays",
+    "name": "Model Mondays",
+    "description": "A weekly livestream with Discord office hours \u2014 5-minute roundups and 15-minute spotlights to help you make informed generative-AI model choices.",
+    "role": "Creator & Host",
+    "url": "https://microsoft.github.io/model-mondays/",
+    "repo": "https://github.com/microsoft/model-mondays",
+    "tech": [
+      "Jupyter Notebook",
+      "microsoft-foundry",
+      "github-models",
+      "azure-ai-model-catalog",
+      "model-choice"
+    ],
+    "startDate": "2025-02-05",
+    "endDate": null,
+    "status": "active",
+    "tags": [
+      "ai",
+      "livestream",
+      "community",
+      "microsoft-foundry",
+      "learning"
+    ]
+  },
+  {
+    "id": "proj-learn-playwright",
+    "name": "#30DaysOfPlaywright",
+    "description": "A 30-day learning journey exploring Playwright, the end-to-end testing platform for modern web apps.",
+    "role": "Creator & Lead",
+    "url": "https://bit.ly/learn-playwright",
+    "repo": "https://github.com/nitya/learn-playwright",
+    "tech": [
+      "Markdown"
+    ],
+    "startDate": "2021-12-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "playwright",
+      "testing",
+      "e2e",
+      "web"
+    ]
+  },
+  {
+    "id": "proj-win-student-devs",
+    "name": "#30DaysOfPWA",
+    "description": "A #30Days learning campaign helping student developers build Progressive Web Apps that run on Windows.",
+    "role": "Creator & Lead",
+    "url": "https://aka.ms/learn-pwa/30Days-blog",
+    "repo": "https://github.com/microsoft/win-student-devs",
+    "tech": [
+      "developer-tools",
+      "pwa",
+      "webapp"
+    ],
+    "startDate": "2022-02-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "pwa",
+      "web",
+      "windows",
+      "students"
+    ]
+  },
+  {
+    "id": "proj-30daysofswa",
+    "name": "#30DaysOfSWA",
+    "description": "A #30Days learning journey jumpstarting builders on Azure Static Web Apps with content and hands-on activities.",
+    "role": "Creator & Lead",
+    "url": "https://github.com/staticwebdev/30DaysOfSWA",
+    "repo": "https://github.com/staticwebdev/30DaysOfSWA",
+    "tech": [
+      "JavaScript",
+      "azure",
+      "azure-functions",
+      "jamstack",
+      "javascript",
+      "reactjs"
+    ],
+    "startDate": "2022-05-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "azure",
+      "static-web-apps",
+      "jamstack",
+      "web"
+    ]
+  },
+  {
+    "id": "proj-julyot",
+    "name": "#30DaysOfIoT (JulyOT)",
+    "description": "The #JulyOT (#30DaysOfIoT) community hub curating Internet of Things content, samples and edge/AI projects each July.",
+    "role": "Creator & Lead",
+    "url": "https://julyot.dev",
+    "repo": "https://github.com/JulyOT/JulyOT",
+    "tech": [
+      "Dockerfile",
+      "ai",
+      "aiot",
+      "cpp",
+      "edge",
+      "embedded"
+    ],
+    "startDate": "2022-07-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "iot",
+      "edge",
+      "embedded",
+      "ai"
+    ]
+  },
+  {
+    "id": "proj-cloud-native",
+    "name": "#30DaysOfServerless & Cloud Native",
+    "description": "A showcase for Azure Cloud Native, powering the #30DaysOfServerless and #30DaysOfCloudNative learning campaigns.",
+    "role": "Creator & Lead",
+    "url": "https://azure.github.io/Cloud-Native/",
+    "repo": "https://github.com/Azure/Cloud-Native",
+    "tech": [
+      "JavaScript"
+    ],
+    "startDate": "2022-09-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "azure",
+      "serverless",
+      "cloud-native",
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "proj-30daysof",
+    "name": "#30DaysOf Learning Hub",
+    "description": "The central #30DaysOf hub of learning resources, samples and curricula spanning multiple themed campaigns.",
+    "role": "Creator & Lead",
+    "url": "https://aka.ms/30DaysOf",
+    "repo": "https://github.com/microsoft/30daysof",
+    "tech": [
+      "JavaScript",
+      "azure",
+      "data-science",
+      "powerapps",
+      "pwa",
+      "serverless"
+    ],
+    "startDate": "2022-10-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "learning",
+      "curriculum",
+      "azure",
+      "community"
+    ]
+  },
+  {
+    "id": "proj-low-code",
+    "name": "#30DaysOfLowCode",
+    "description": "A #30DaysOfLowCode campaign showcasing low-code and fusion development with Microsoft Power Platform.",
+    "role": "Creator & Lead",
+    "url": "https://aka.ms/lowcode-february",
+    "repo": "https://github.com/microsoft/Low-Code",
+    "tech": [
+      "JavaScript",
+      "30days",
+      "azure",
+      "cloud-skills",
+      "fusion-development",
+      "low-code"
+    ],
+    "startDate": "2023-02-01",
+    "endDate": null,
+    "status": "archived",
+    "tags": [
+      "30DaysOf",
+      "low-code",
+      "power-platform",
+      "fusion-development",
+      "azure"
+    ]
+  },
+  {
+    "id": "proj-hub",
+    "name": "#30DaysOfAI (AI April)",
+    "description": "The #30DaysOfAI (AI April) hub showcasing Azure AI learning content and community initiatives.",
+    "role": "Creator & Lead",
+    "url": "https://aka.ms/ai-april",
+    "repo": "https://github.com/AzureAiDevs/hub",
+    "tech": [
+      "JavaScript"
+    ],
+    "startDate": "2023-04-01",
+    "endDate": null,
+    "status": "completed",
+    "tags": [
+      "30DaysOf",
+      "ai",
+      "azure-ai",
+      "community",
+      "learning"
+    ]
+  },
+  {
+    "id": "proj-contoso-chat",
+    "name": "Contoso Chat",
+    "description": "An end-to-end RAG sample built with Prompty and Azure AI Foundry, with evaluations and AZD deployment automation.",
+    "role": "Creator & Lead",
+    "url": "https://github.com/Azure-Samples/contoso-chat",
+    "repo": "https://github.com/Azure-Samples/contoso-chat",
+    "tech": [
+      "Bicep",
+      "ai-azd-templates",
+      "azd-templates",
+      "microsoft-foundry",
+      "azure-ai-samples",
+      "azure-ai-search"
+    ],
+    "startDate": "2023-11-01",
+    "endDate": null,
+    "status": "archived",
+    "tags": [
+      "rag",
+      "microsoft-foundry",
+      "prompty",
+      "llmops",
+      "copilot"
+    ]
+  }
+]

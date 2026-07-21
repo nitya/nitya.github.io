@@ -1,0 +1,65 @@
+---
+import "../styles/theme.css";
+import SEO from "../components/SEO.astro";
+import Nav from "../components/Nav.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+import { profile } from "../lib/profile.ts";
+
+export interface Props {
+  title: string;
+  description: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, jsonLd } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO title={title} description={description} jsonLd={jsonLd} />
+    <script is:inline>
+      // Apply saved theme before first paint to prevent a flash of wrong theme.
+      (function () {
+        try {
+          const t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <Nav>
+      <ThemeToggle />
+    </Nav>
+    <main class="container page">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© {year} {profile.name} · Systems Researcher · Community Builder · Developer Advocate</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .page {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    min-height: 60vh;
+  }
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>

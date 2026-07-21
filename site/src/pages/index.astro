@@ -1,0 +1,268 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../lib/profile.ts";
+import { getAllContentItems, typeLabel } from "../lib/content.ts";
+
+const items = await getAllContentItems();
+const highlights = items.slice(0, 5);
+
+const monthAbbr = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+function shortDate(date: string | null): string {
+  if (!date) return "";
+  const [, m, d] = date.split("-").map(Number);
+  return `${monthAbbr[m - 1]} ${d}`;
+}
+function yearOf(date: string | null): string {
+  return date ? date.split("-")[0] : "Undated";
+}
+
+// Group highlights by year, preserving the newest-first order.
+const groups: { year: string; items: typeof highlights }[] = [];
+for (const item of highlights) {
+  const year = yearOf(item.date);
+  let group = groups.find((g) => g.year === year);
+  if (!group) {
+    group = { year, items: [] };
+    groups.push(group);
+  }
+  group.items.push(item);
+}
+
+const counts = {
+  patents: items.filter((i) => i.type === "patent").length,
+  publications: items.filter((i) => i.type === "publication").length,
+  talks: items.filter((i) => i.type === "talk").length,
+  projects: items.filter((i) => i.type === "project").length,
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  description: profile.headline,
+  jobTitle: profile.headline,
+  url: "https://nitya.github.io",
+  sameAs: profile.sameAs,
+};
+---
+
+<BaseLayout
+  title={`${profile.name} — ${profile.headline}`}
+  description={profile.bio}
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <p class="eyebrow">An Autodidact in AI</p>
+    <h1><span class="gradient-text">{profile.name}</span></h1>
+    <p class="headline">{profile.headline}</p>
+    <p class="bio">{profile.bio}</p>
+    <div class="cta">
+      <a class="btn" href="/content">Explore content</a>
+      <a class="btn secondary" href="/about">About me</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <a href="/content?type=patent" class="stat card"><span>{counts.patents}</span>Patents</a>
+    <a href="/content?type=publication" class="stat card"><span>{counts.publications}</span>Publications</a>
+    <a href="/content?type=talk" class="stat card"><span>{counts.talks}</span>Talks</a>
+    <a href="/content?type=project" class="stat card"><span>{counts.projects}</span>Projects</a>
+  </section>
+
+  <section class="highlights">
+    <div class="sec-head">
+      <h2>Recent highlights</h2>
+      <a href="/content">View all →</a>
+    </div>
+    {
+      groups.map((group) => (
+        <div class="year-group">
+          <h3 class="year">{group.year}</h3>
+          <ul class="hl-list">
+            {group.items.map((item) => (
+              <li class="hl-item">
+                <span class="hl-date">{shortDate(item.date)}</span>
+                <span class={`hl-cat cat-${item.type}`}>{typeLabel(item.type)}</span>
+                <span class="hl-text">
+                  <a class="hl-title" href={item.url} target="_blank" rel="noopener">
+                    {item.title}
+                  </a>
+                  {item.source && <span class="hl-loc"> · {item.source}</span>}
+                  {item.tags.length > 0 && (
+                    <span class="hl-tags">
+                      {item.tags.map((t) => (
+                        <a class="hl-tag" href={`/content?tag=${encodeURIComponent(t)}`}>
+                          #{t}
+                        </a>
+                      ))}
+                    </span>
+                  )}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 2rem 0 2.5rem;
+    max-width: 760px;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--brand-2);
+    margin: 0 0 0.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    margin: 0 0 0.4rem;
+  }
+  .headline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+  .bio {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+  .cta {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 3rem;
+  }
+  .stat {
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .stat span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+  }
+  .stat:hover {
+    text-decoration: none;
+    border-color: var(--brand);
+  }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .sec-head h2 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .year-group {
+    margin-bottom: 1.75rem;
+  }
+  .year {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--brand);
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.02em;
+  }
+  .hl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hl-item {
+    display: grid;
+    grid-template-columns: 3.5rem 5.5rem 1fr;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+  .hl-date {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .hl-cat {
+    justify-self: start;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .cat-patent {
+    background: color-mix(in srgb, var(--gold) 22%, transparent);
+    color: color-mix(in srgb, var(--gold) 80%, #000);
+  }
+  .cat-talk {
+    background: color-mix(in srgb, var(--blue) 16%, transparent);
+    color: var(--blue);
+  }
+  .hl-text {
+    min-width: 0;
+  }
+  .hl-title {
+    font-weight: 700;
+    color: var(--text);
+  }
+  .hl-title:hover {
+    color: var(--brand);
+  }
+  .hl-loc {
+    color: var(--text-muted);
+  }
+  .hl-tags {
+    margin-left: 0.5rem;
+  }
+  .hl-tag {
+    color: var(--brand-2);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-right: 0.4rem;
+  }
+  .hl-tag:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 560px) {
+    .hl-item {
+      grid-template-columns: 4rem 1fr;
+    }
+    .hl-cat {
+      grid-column: 2;
+      margin-bottom: 0.2rem;
+    }
+    .hl-text {
+      grid-column: 2;
+    }
+  }
+</style>

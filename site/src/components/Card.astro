@@ -1,0 +1,107 @@
+---
+import type { ContentItem } from "../lib/content.ts";
+import { typeLabel } from "../lib/content.ts";
+
+export interface Props {
+  item: ContentItem;
+}
+const { item } = Astro.props;
+const dateLabel = item.date ? new Date(item.date).getFullYear() : "";
+---
+
+<article
+  class="card content-card"
+  data-type={item.type}
+  data-title={item.title.toLowerCase()}
+  data-tags={item.tags.join(" ").toLowerCase()}
+  data-date={item.date ?? ""}
+>
+  <div class="head">
+    <span class={`chip type-${item.type}`}>{typeLabel(item.type)}</span>
+    {dateLabel && <span class="date">{dateLabel}</span>}
+  </div>
+  <h3 class="title">
+    <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
+  </h3>
+  <p class="source">{item.source}{item.meta ? ` · ${item.meta}` : ""}</p>
+  {item.description && <p class="desc">{item.description}</p>}
+  {
+    item.tags.length > 0 && (
+      <div class="tags">
+        {item.tags.slice(0, 4).map((t) => (
+          <span class="tag">#{t}</span>
+        ))}
+      </div>
+    )
+  }
+</article>
+
+<style>
+  .content-card {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .content-card:hover {
+    transform: translateY(-3px);
+  }
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .title {
+    margin: 0.1rem 0;
+    font-size: 1.05rem;
+  }
+  .title a {
+    color: var(--brand-2);
+    text-decoration: none;
+  }
+  .title a:hover,
+  .title a:focus {
+    text-decoration: underline;
+  }
+  .source {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .desc {
+    margin: 0.25rem 0 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.5rem;
+  }
+  .tag {
+    color: var(--brand-2);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .type-patent {
+    background: color-mix(in srgb, var(--gold) 22%, transparent);
+    color: color-mix(in srgb, var(--gold) 78%, #000);
+  }
+  .type-talk {
+    background: color-mix(in srgb, var(--blue) 18%, transparent);
+    color: var(--blue);
+  }
+</style>

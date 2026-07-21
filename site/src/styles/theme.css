@@ -1,0 +1,178 @@
+/* ------------------------------------------------------------------ *
+ * Theme tokens — modern purple / blue / gold palette, light + dark.
+ * Toggle sets `data-theme="light|dark"` on <html>; absent = system pref.
+ * ------------------------------------------------------------------ */
+
+:root {
+  --purple: #7c3aed;
+  --purple-600: #6d28d9;
+  --blue: #2563eb;
+  --blue-400: #60a5fa;
+  --gold: #f2b705;
+  --gold-soft: #fcd34d;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --maxw: 1080px;
+  --shadow: 0 6px 24px rgba(24, 12, 48, 0.12);
+}
+
+/* Light theme (default) */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf9ff;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --border: #e7e3f5;
+  --text: #1c1233;
+  --text-muted: #5b5470;
+  --brand: var(--purple);
+  --brand-2: var(--blue);
+  --accent: var(--gold);
+  --gradient: linear-gradient(135deg, var(--purple) 0%, var(--blue) 60%, var(--gold) 130%);
+  --chip-bg: #f1edff;
+  --chip-text: #4c1d95;
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f0b1e;
+  --bg-elev: #17122b;
+  --surface: #1b1533;
+  --border: #2c2450;
+  --text: #f2effc;
+  --text-muted: #b7aede;
+  --brand: var(--blue-400);
+  --brand-2: #a78bfa;
+  --accent: var(--gold-soft);
+  --gradient: linear-gradient(135deg, #a78bfa 0%, #60a5fa 55%, var(--gold-soft) 130%);
+  --chip-bg: #251d47;
+  --chip-text: #d6c9ff;
+}
+
+/* Respect system preference when no explicit choice is stored */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg: #0f0b1e;
+    --bg-elev: #17122b;
+    --surface: #1b1533;
+    --border: #2c2450;
+    --text: #f2effc;
+    --text-muted: #b7aede;
+    --brand: var(--blue-400);
+    --brand-2: #a78bfa;
+    --accent: var(--gold-soft);
+    --gradient: linear-gradient(135deg, #a78bfa 0%, #60a5fa 55%, var(--gold-soft) 130%);
+    --chip-bg: #251d47;
+    --chip-text: #d6c9ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: var(--gradient);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn:hover {
+  text-decoration: none;
+  filter: brightness(1.05);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+input,
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.75rem;
+}
+input:focus,
+select:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+}
