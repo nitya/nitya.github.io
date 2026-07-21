@@ -1,26 +1,27 @@
-# nitya.github.io
+# Nitya Narasimhan, PhD
 
-Nitya Narasimhan's personal knowledge platform and website.
+This repository is a living experiment to create a centralized personal knowledge base for my personal and professional content based on using structured data and agentic workflows to ensure it remains consistent and complete. 
 
-This repository has three goals:
+- Phase 1: Establish data files and workflows to populate them
+- Phase 2: Build a static website with data - on GitHub Pages
+- Phase 3: Build a dynamic website with chatbot - in the cloud.
 
-## 1. A personal knowledge platform
+## Data Sources
 
-Act as a personal knowledge platform for structured data access around my
-personal content and profile. The structured data captured here is the
-canonical, source-of-truth representation of who I am and what I've made.
+Every activity or credential must be backed by a structured data source with a defined schema. Where possible, the schema should be compliant with a canonical source for that _class_ of information. Examples:
 
-## 2. A data-driven static website
+1. **Patents** - USPTO, Google Patents or Justia citation formats
+1. **Publications** - Google Scholar, ACM and IEEE citation formats
+1. **Talks** - Sessionize, SpeakerDeck citation formats
+1. **Projects** - LinkedIn and GitHub citation formats
+1. **Profile** - LinkedIn and GitHub citation formats
 
-Power a static website using this data, where the data is the source of truth
-and the website is simply the view for humans. The site renders the underlying
-data — it never becomes an independent source of truth of its own.
+## Human Experience
 
-## 3. An agent-friendly surface
+The data powers a website that serves as the user-interface for human visitors. In phase 1, the focus is just rendering the content with meaningful routes. In phase 2, we can add richer features like search, sort and dark mode. In phase 3, we add dynamic integrations.
 
-Provide skills, `llms.txt`, `AGENTS.md`, and other files and data that make it
-easy for:
+The website should support standards like [OpenGraph](https://ogp.me/) that allow it to become a rich object in a social graph - and take advantage of capabilities like [oembed](https://oembed.com/) to support richer content presentation when the link is cited elsewhere.
 
-- **Remote agents** to work with the personal knowledge platform — for example,
-  to power a chat bot experience grounded in my content and profile.
-- **Coding agents** to maintain the platform and the website over time.
+## 3. Agent Experience
+
+The structured data formats should be accessible over a basic GitHub MCP server connection (generic) and the site should be equipped with an AGENTS.md (for coding agents) and an llms.txt (for search agents) along with custom skills and MCP servers to support effective usage. The repository may also have agentic workflows that can run async to keep data up-to-date or support other maintenance.
