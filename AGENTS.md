@@ -26,7 +26,8 @@ site/            ← Astro static site (a view of data/)
 .devcontainer/   ← Dev Container / Codespaces config + post-create bootstrap
 .github/
   skills/        ← runnable skills to maintain the data (see below)
-  workflows/     ← GitHub Pages deploy
+  scripts/       ← intake.py (issue-comment data intake parser)
+  workflows/     ← deploy.yml (GitHub Pages) + intake.yml (issue-comment intake)
   PLAN.md        ← phased build plan
 ```
 
@@ -98,6 +99,22 @@ Repo-local skills in `.github/skills/` automate data maintenance:
 A request like *"add patent &lt;link&gt;"* should trigger `add-patent` (or
 `add-data-item` for a one-off): parse the source, append to the matching
 `data/*.json`, and validate the build. No website edit needed.
+
+## Issue-comment data intake
+
+`.github/workflows/intake.yml` turns a permanent issue (labelled `data-intake`)
+into an inbox. When the owner comments `add <type> <url>` lines (one per line,
+with an optional `| note`), `.github/scripts/intake.py` fetches metadata,
+appends normalized records to the right `data/*.json`, validates the build,
+commits to `main`, replies on the issue, and dispatches the deploy workflow.
+
+- Supported types: `workshop`/`session`/`lab`/`training`/`curriculum`/`course`
+  → `training.json`; `project` → `projects.json`; `talk` → `talks.json`.
+- Patents/publications are intentionally **not** auto-added (they need the richer
+  parsing in the CLI skills) — the script reports them as skipped.
+- When editing the intake, keep the parser's normalization consistent with the
+  rules above (stable ids, dedupe, `microsoft-foundry` naming, valid URLs) and
+  keep the two builders' output valid against the Zod schemas.
 
 ## Local development
 

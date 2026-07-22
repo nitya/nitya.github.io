@@ -47,7 +47,7 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; nitya-intake-bot/1.0)"}
 
 TRAINING_KINDS = {"workshop", "session", "lab", "training", "curriculum", "course"}
 ALIASES = {k: "training" for k in TRAINING_KINDS}
-ALIASES.update({"project": "project", "talk": "talk"})
+ALIASES.update({"project": "projects", "talk": "talks"})
 
 MANUAL_ONLY = {"patent", "publication", "paper"}
 
@@ -171,7 +171,7 @@ def parse_github(url: str):
     m = re.search(r"github\.com/([^/\s]+)/([^/\s#?]+)", url)
     if not m:
         raise ValueError("not a GitHub repo URL")
-    owner, repo = m.group(1), m.group(2).replace(".git", "")
+    owner, repo = m.group(1), re.sub(r"\.git$", "", m.group(2))
     try:
         d = http_json(f"https://api.github.com/repos/{owner}/{repo}")
     except urllib.error.HTTPError as e:
@@ -228,7 +228,7 @@ def build_project(url: str, note: str | None):
         "status": "archived" if d.get("archived") else "active",
         "tags": clean_tags(d.get("topics") or []),
     }
-    return "project", item
+    return "projects", item
 
 
 def build_talk(url: str, note: str | None):
@@ -267,10 +267,10 @@ def build_talk(url: str, note: str | None):
         "description": description.strip(),
         "tags": [],
     }
-    return "talk", item
+    return "talks", item
 
 
-BUILDERS = {"training": build_training, "project": build_project, "talk": build_talk}
+BUILDERS = {"training": build_training, "projects": build_project, "talks": build_talk}
 
 
 # --------------------------------------------------------------------------- #
@@ -287,6 +287,7 @@ def process(body: str):
     changed = False
     caches: dict[str, list] = {}
     seen_this_run: set[str] = set()
+    dirty: set[str] = set()
 
     for raw in body.splitlines():
         m = LINE_RE.match(raw)
@@ -324,12 +325,12 @@ def process(body: str):
         items.append(item)
         seen_this_run.add(key)
         changed = True
+        dirty.add(name)
         label = item.get("title") or item.get("name")
         results.append(("ok", raw.strip(), f"added **{label}** to `data/{name}.json` (id `{key}`)."))
 
-    if changed:
-        for name, items in caches.items():
-            save(name, items)
+    for name in dirty:
+        save(name, caches[name])
 
     return changed, results
 

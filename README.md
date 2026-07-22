@@ -78,6 +78,24 @@ Reusable pieces of note: a **data-driven notification banner** (backed by
 A request like *"add patent &lt;link&gt;"* triggers the matching skill: parse the
 source, append to the right `data/*.json`, and validate the build — no site edit.
 
+### Add data by commenting on an issue
+
+There's a permanent **“Data intake”** issue (labelled `data-intake`). Comment one
+or more lines and a workflow does the rest — no local checkout needed:
+
+```
+add workshop https://github.com/microsoft/Build26-LAB540-...
+add project  https://github.com/owner/repo | optional note
+add talk     https://www.slideshare.net/slideshow/<slug>/<id>
+```
+
+[`.github/workflows/intake.yml`](./.github/workflows/intake.yml) runs
+[`.github/scripts/intake.py`](./.github/scripts/intake.py), which parses each
+`add <type> <url>` line, fetches metadata from the source, appends to the right
+`data/*.json`, validates the build, commits, replies on the issue, and redeploys.
+Supported types: `workshop`/`session`/`lab`/`training`/`curriculum`/`course` →
+training, `project`, and `talk`. Patents & publications still use the CLI skills.
+
 ## Repository layout
 
 ```
@@ -91,7 +109,8 @@ site/                 Astro static site (a view of data/), deployed to GitHub Pa
 .devcontainer/        Dev Container / Codespaces config + post-create bootstrap
 .github/
   skills/             Runnable skills to maintain the data (add/update/research)
-  workflows/          GitHub Pages deploy workflow
+  scripts/            intake.py — issue-comment data intake parser
+  workflows/          deploy.yml (GitHub Pages) + intake.yml (issue-comment intake)
   PLAN.md             Phased build plan
 AGENTS.md             Best practices for coding agents
 ```
