@@ -1,0 +1,104 @@
+name: Data intake (issue comments)
+
+# Turns a "data-intake" labelled issue into an inbox: comment
+#   add workshop https://github.com/microsoft/Build26-LAB540-...
+#   add project  https://github.com/owner/repo | short note
+#   add talk     https://www.slideshare.net/slideshow/<slug>/<id>
+# ...and this workflow parses each line, updates data/*.json, validates the
+# build, commits to main, replies on the issue, and redeploys the site.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: data-intake-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    # Only run on the permanent intake issue (labelled `data-intake`), only for
+    # comments by the repo owner/collaborators, and never on the bot's own replies.
+    if: >-
+      github.event.issue.state == 'open' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'data-intake') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Acknowledge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST repos/${{ github.repository }}/issues/comments/${{ github.event.comment.id }}/reactions -f content=eyes || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Parse comment and update data
+        id: intake
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          INTAKE_RESULT: intake_result.md
+        run: python .github/scripts/intake.py
+
+      - name: Set up Node
+        if: steps.intake.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate build
+        id: validate
+        if: steps.intake.outputs.changed == 'true'
+        working-directory: site
+        run: |
+          npm ci || npm install
+          npm run build
+
+      - name: Revert data on failed build
+        if: steps.intake.outputs.changed == 'true' && failure()
+        run: |
+          git checkout -- data
+          printf '\n> ⚠️ The site build failed to validate these changes, so nothing was committed. Please check the item(s) and try again.\n' >> intake_result.md
+
+      - name: Commit and push
+        id: commit
+        if: steps.intake.outputs.changed == 'true' && steps.validate.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "data: intake from issue #${{ github.event.issue.number }} comment
+
+          Requested-by: @${{ github.event.comment.user.login }}
+          Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>"
+          git push origin main
+          echo "sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger deploy
+        if: steps.commit.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
+
+      - name: Reply on issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.commit.outcome }}" = "success" ]; then
+            printf '\n> 📦 Committed as `%s` and redeploying the site now. It will be live in a couple of minutes.\n' "${{ steps.commit.outputs.sha }}" >> intake_result.md
+          fi
+          gh issue comment ${{ github.event.issue.number }} --body-file intake_result.md

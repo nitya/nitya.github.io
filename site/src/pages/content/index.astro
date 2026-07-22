@@ -11,6 +11,35 @@ const allTags = [...new Set(items.flatMap((i) => i.tags))].sort();
 const description =
   "Browse patents, publications, talks, and projects — one card per item, searchable, sortable, and filterable.";
 
+// Per-type header copy. The client script swaps the H1 + lede when a type
+// filter is selected (and on initial ?type= load).
+const typeCopy: Record<string, { title: string; lede: string }> = {
+  all: {
+    title: "All Content",
+    lede: description,
+  },
+  patent: {
+    title: "Patents",
+    lede: "Patents issued to me for research in mobile & wireless systems, context- and attention-aware computing, and media & advertising technology.",
+  },
+  publication: {
+    title: "Publications",
+    lede: "Peer-reviewed papers, workshop contributions, and my PhD thesis — spanning distributed systems, mobile agents, and human-centered computing.",
+  },
+  talk: {
+    title: "Talks",
+    lede: "Conference talks, keynotes, and livestream sessions I've delivered — mostly on AI, developer tools, and cloud-native development.",
+  },
+  project: {
+    title: "Projects",
+    lede: "Open-source learning campaigns and samples I created and led — reusable content aligned to core organizational priorities.",
+  },
+  training: {
+    title: "Training",
+    lede: "Educational content I've contributed to — either first-party Microsoft events (Build, AI Tour, Ignite) or open curricula (like Generative AI for Beginners). Each item links the top-level repo; the description captures my specific contributions.",
+  },
+};
+
 // Per-item structured data (schema.org) for SEO.
 const schemaType: Record<string, string> = {
   patent: "CreativeWork",
@@ -39,9 +68,11 @@ const jsonLd = {
 
 <BaseLayout title={`Content · ${profile.name}`} description={description} jsonLd={jsonLd}>
   <header class="page-head">
-    <h1 class="gradient-text">Content</h1>
-    <p>{description}</p>
+    <h1 id="page-title" class="gradient-text">{typeCopy.all.title}</h1>
+    <p id="page-lede">{typeCopy.all.lede}</p>
   </header>
+
+  <script type="application/json" id="type-copy" set:html={JSON.stringify(typeCopy)} />
 
   <Filters allTags={allTags} />
 
@@ -126,6 +157,20 @@ const jsonLd = {
   const pager = document.getElementById("pager")!;
   const empty = document.getElementById("empty")!;
   const countEl = document.getElementById("result-count")!;
+  const titleEl = document.getElementById("page-title")!;
+  const ledeEl = document.getElementById("page-lede")!;
+
+  const typeCopy: Record<string, { title: string; lede: string }> = JSON.parse(
+    document.getElementById("type-copy")?.textContent || "{}"
+  );
+
+  function updateHeader() {
+    const copy = typeCopy[activeType] ?? typeCopy.all;
+    if (copy) {
+      titleEl.textContent = copy.title;
+      ledeEl.textContent = copy.lede;
+    }
+  }
 
   let activeType = "all";
   let page = 1;
@@ -216,6 +261,7 @@ const jsonLd = {
       typeBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       activeType = btn.dataset.type ?? "all";
+      updateHeader();
       reset();
     })
   );
@@ -235,5 +281,6 @@ const jsonLd = {
     if (match) tagSel.value = initialTag;
   }
 
+  updateHeader();
   render();
 </script>

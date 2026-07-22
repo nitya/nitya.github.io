@@ -13,7 +13,42 @@ const isActive = (href: string) =>
 
 <nav class="site-nav">
   <div class="container nav-inner">
-    <a href="/" class="brand gradient-text">{profile.name}</a>
+    <a href="/" class="brand" aria-label={`${profile.name} — home`}>
+      <svg
+        class="logo"
+        viewBox="0 0 54 40"
+        role="img"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient id="nnPeakA" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--brand)" />
+            <stop offset="1" stop-color="var(--brand-2)" />
+          </linearGradient>
+          <linearGradient id="nnPeakB" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--brand-2)" />
+            <stop offset="1" stop-color="var(--accent)" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M7 37 V11 L25 37 V11"
+          fill="none"
+          stroke="url(#nnPeakA)"
+          stroke-width="5.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M22 37 V11 L40 37 V11"
+          fill="none"
+          stroke="url(#nnPeakB)"
+          stroke-width="5.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
     <div class="nav-right">
       <ul class="nav-links">
         {
@@ -47,11 +82,20 @@ const isActive = (href: string) =>
     height: 64px;
   }
   .brand {
-    font-weight: 800;
-    font-size: 1.15rem;
+    display: inline-flex;
+    align-items: center;
   }
   .brand:hover {
     text-decoration: none;
+  }
+  .logo {
+    height: 30px;
+    width: auto;
+    display: block;
+    transition: transform 0.15s ease;
+  }
+  .brand:hover .logo {
+    transform: translateY(-1px) scale(1.04);
   }
   .nav-right {
     display: flex;

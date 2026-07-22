@@ -1,0 +1,164 @@
+[
+  {
+    "id": "training-generative-ai-for-beginners",
+    "title": "Generative AI for Beginners",
+    "program": "Curriculum",
+    "description": "Authored 2 lessons in Microsoft's Generative AI for Beginners curriculum \u2014 a hands-on course teaching the fundamentals of building generative AI applications.",
+    "url": "https://github.com/microsoft/generative-ai-for-beginners",
+    "date": null,
+    "tags": [
+      "for-beginners",
+      "generative-ai",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "training-data-science-for-beginners",
+    "title": "Data Science for Beginners",
+    "program": "Curriculum",
+    "description": "Contributed the Data Ethics lesson and created sketchnotes for Microsoft's Data Science for Beginners curriculum.",
+    "url": "https://github.com/microsoft/Data-Science-For-Beginners",
+    "date": null,
+    "tags": [
+      "for-beginners",
+      "data-science",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "training-iot-for-beginners",
+    "title": "IoT for Beginners",
+    "program": "Curriculum",
+    "description": "Created sketchnotes for Microsoft's IoT for Beginners curriculum \u2014 a 12-week, 24-lesson course visualizing key concepts across the lesson series.",
+    "url": "https://github.com/microsoft/IoT-For-Beginners",
+    "date": null,
+    "tags": [
+      "for-beginners",
+      "iot",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "training-build26-lab540-hosted-agents-foundry",
+    "title": "Observe, Optimize & Protect Your Hosted Agents in Microsoft Foundry",
+    "program": "Microsoft Build 2026",
+    "description": "Authored LAB540, a hands-on workshop teaching attendees to observe, optimize, and protect hosted agents in Microsoft Foundry \u2014 covering tracing, evaluations, and responsible AI.",
+    "url": "https://github.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "agents",
+      "microsoft-foundry",
+      "observability"
+    ]
+  },
+  {
+    "id": "training-aitour26-ltg153-model-router",
+    "title": "Automate Model Selection with Microsoft Foundry Model Router",
+    "program": "Microsoft AI Tour 2026",
+    "description": "Authored session LTG153, a guided lab on automating model selection using the Microsoft Foundry model router.",
+    "url": "https://github.com/microsoft/aitour26-LTG153-automate-model-selection-with-microsoft-foundry-model-router",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "microsoft-foundry",
+      "model-router"
+    ]
+  },
+  {
+    "id": "training-ignite25-prel13-scale-agentic-ai-foundry",
+    "title": "Observe, Manage & Scale Agentic AI Apps with Microsoft Foundry",
+    "program": "Microsoft Ignite 2025",
+    "description": "Authored PREL13, a hands-on workshop on observing, managing, and scaling agentic AI apps with Microsoft Foundry.",
+    "url": "https://github.com/microsoft/ignite25-PREL13-observe-manage-and-scale-agentic-ai-apps-with-microsoft-foundry",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "agents",
+      "microsoft-foundry",
+      "observability"
+    ]
+  },
+  {
+    "id": "training-aitour26-ltg151-trustworthy-ai-evaluations",
+    "title": "Build Trustworthy AI with Systematic Evaluations in Microsoft Foundry",
+    "program": "Microsoft AI Tour 2026",
+    "description": "Authored LTG151, a session on building trustworthy AI with systematic evaluations in Microsoft Foundry \u2014 covering quality, safety, agent, and custom evaluators.",
+    "url": "https://github.com/microsoft/aitour26-LTG151-build-trustworthy-ai-with-systematic-evaluations-in-microsoft-foundry",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "evaluations",
+      "microsoft-foundry",
+      "responsible-ai"
+    ]
+  },
+  {
+    "id": "training-build26-brk230-smarter-ai-systems-foundry",
+    "title": "Build Smarter AI Systems in Foundry as Models and Costs Evolve",
+    "program": "Microsoft Build 2026",
+    "description": "Authored BRK230, a Microsoft Build 2026 breakout on building smarter AI systems in Microsoft Foundry \u2014 hill-climbing across quality, cost, and latency with a model playbook.",
+    "url": "https://github.com/microsoft/Build26-BRK230-build-smarter-ai-systems-in-foundry-as-models-and-costs-evolve",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "microsoft-foundry",
+      "cost-optimization"
+    ]
+  },
+  {
+    "id": "training-linkedin-learning-html-css-javascript",
+    "title": "HTML, CSS, and JavaScript: Building the Web",
+    "program": "LinkedIn Learning",
+    "description": "Instructor for this LinkedIn Learning course teaching the tools of web development \u2014 getting started coding in HTML, CSS, and JavaScript.",
+    "url": "https://www.linkedin.com/learning/html-css-and-javascript-building-the-web",
+    "date": null,
+    "tags": [
+      "course",
+      "web",
+      "javascript"
+    ]
+  },
+  {
+    "id": "training-build25-lab333-evaluate-reasoning-models",
+    "title": "Evaluate Reasoning Models for Your Generative AI Solutions",
+    "program": "Microsoft Build 2025",
+    "description": "Authored LAB333, a hands-on workshop on evaluating reasoning models for generative AI solutions.",
+    "url": "https://github.com/microsoft/BUILD25-LAB333",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "evaluations",
+      "microsoft-foundry"
+    ]
+  },
+  {
+    "id": "training-build25-lab334-evaluate-improve-quality-safety",
+    "title": "Evaluate & Improve the Quality and Safety of Your AI Applications",
+    "program": "Microsoft Build 2025",
+    "description": "Authored LAB334, a hands-on workshop on evaluating and improving the quality and safety of AI applications.",
+    "url": "https://github.com/microsoft/BUILD25-LAB334",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "evaluations",
+      "responsible-ai",
+      "microsoft-foundry"
+    ]
+  },
+  {
+    "id": "training-aitour26-ltg156-safeguard-agentic-ai-red-teaming",
+    "title": "Safeguard Agentic AI Solutions with the AI Red Teaming Agent",
+    "program": "Microsoft AI Tour 2026",
+    "description": "Authored LTG156, a session on safeguarding agentic AI solutions using the AI Red Teaming Agent.",
+    "url": "https://github.com/microsoft/aitour26-LTG156-safeguard-agentic-ai-solutions-with-ai-red-teaming-agent",
+    "date": null,
+    "tags": [
+      "msft-workshops",
+      "agents",
+      "responsible-ai",
+      "red-teaming",
+      "microsoft-foundry"
+    ]
+  }
+]

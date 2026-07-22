@@ -1,0 +1,125 @@
+---
+// Reusable, data-driven notification banner.
+// Bound to the `notifications` collection (repo-root data/notifications.json).
+// Add/edit entries there to show site-wide banners — no code changes needed.
+import { getCollection } from "astro:content";
+
+const now = Date.now();
+const entries = await getCollection("notifications");
+const active = entries
+  .map((e) => e.data)
+  .filter((n) => {
+    if (!n.active) return false;
+    if (n.startDate && Date.parse(n.startDate) > now) return false;
+    if (n.endDate && Date.parse(n.endDate) < now) return false;
+    return true;
+  });
+---
+
+{
+  active.length > 0 && (
+    <div class="banners" role="region" aria-label="Site notifications">
+      {active.map((n) => (
+        <div class={`banner banner-${n.type}`} data-banner-id={n.id} role="status">
+          <span class="banner-msg">{n.message}</span>
+          {n.link && (
+            <a class="banner-link" href={n.link.url} target="_blank" rel="noopener">
+              {n.link.label} →
+            </a>
+          )}
+          {n.dismissible && (
+            <button
+              class="banner-close"
+              type="button"
+              aria-label="Dismiss notification"
+              data-dismiss={n.id}
+            >
+              ✕
+            </button>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .banners {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+  }
+  .banner-msg {
+    flex: 1;
+    min-width: 0;
+  }
+  .banner-link {
+    white-space: nowrap;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .banner-link:hover {
+    text-decoration: underline;
+  }
+  .banner-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: 0.85rem;
+    line-height: 1;
+    opacity: 0.7;
+    padding: 0.2rem;
+  }
+  .banner-close:hover {
+    opacity: 1;
+  }
+  /* Type variants via theme tokens */
+  .banner-info {
+    background: color-mix(in srgb, var(--blue) 14%, transparent);
+    color: var(--text);
+  }
+  .banner-warning {
+    background: color-mix(in srgb, var(--gold) 20%, transparent);
+    color: var(--text);
+  }
+  .banner-success {
+    background: color-mix(in srgb, var(--brand-2) 16%, transparent);
+    color: var(--text);
+  }
+  .banner-announcement {
+    background: var(--gradient);
+    color: var(--color-white, #fff);
+  }
+</style>
+
+<script>
+  // Hide banners the visitor has already dismissed (persisted per id).
+  (function () {
+    try {
+      document.querySelectorAll("[data-banner-id]").forEach((el) => {
+        const id = el.getAttribute("data-banner-id");
+        if (id && localStorage.getItem("banner-dismissed:" + id) === "1") {
+          (el as HTMLElement).style.display = "none";
+        }
+      });
+      document.querySelectorAll("[data-dismiss]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-dismiss");
+          if (!id) return;
+          localStorage.setItem("banner-dismissed:" + id, "1");
+          const banner = btn.closest("[data-banner-id]");
+          if (banner) (banner as HTMLElement).style.display = "none";
+        });
+      });
+    } catch (e) {}
+  })();
+</script>

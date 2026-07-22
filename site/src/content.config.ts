@@ -71,4 +71,34 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { patents, publications, talks, projects };
+const training = defineCollection({
+  loader: file("../data/training.json"),
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    program: z.string().optional(),
+    description: z.string(),
+    url: z.string().url(),
+    date: z.string().nullable().optional(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+const notifications = defineCollection({
+  loader: file("../data/notifications.json"),
+  schema: z.object({
+    id: z.string(),
+    active: z.boolean().default(true),
+    type: z.enum(["info", "warning", "success", "announcement"]).default("info"),
+    message: z.string(),
+    link: z
+      .object({ label: z.string(), url: z.string().url() })
+      .nullable()
+      .optional(),
+    dismissible: z.boolean().default(true),
+    startDate: z.string().nullable().optional(),
+    endDate: z.string().nullable().optional(),
+  }),
+});
+
+export const collections = { patents, publications, talks, projects, training, notifications };

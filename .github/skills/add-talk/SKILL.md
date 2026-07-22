@@ -86,6 +86,21 @@ Extract `title`, `event`, `location` (City, ST), `date` (from the "Mon DD" and t
 page's year), and `slidesUrl`/`videoUrl` from the linked words. When only a month
 is given, use the event's start date.
 
+### E. SlideShare deck(s)
+SlideShare is behind a bot-challenge ("Client Challenge"), so `curl` of the
+profile, RSS (`/rss/user/<handle>`), oembed, and API endpoints all return a JS
+challenge page — they do **not** work. The profile is also JS-rendered, so you
+cannot enumerate a user's decks by scraping. Ask the user for the individual deck
+URLs (form `https://www.slideshare.net/slideshow/<slug>/<id>`).
+For each deck URL, use the **web_fetch tool** (which passes the challenge) with
+`raw: true` and read the `<script type="application/ld+json">` block:
+`name` → title, `datePublished` (`YYYY-MM-DD HH:MM:SS UTC`) → `date`,
+`description` → `description`. The `<title>`/`og:title` meta tags carry the same
+title if the slug is messy (e.g. `Angular js gtg-27feb2013` → normalize to a clean
+title). Infer `event`/`location` from the title, slug, or thumbnail filename
+(e.g. `...nyc-semanticweb-meetup-mar2010...`). Set both `url` and `slidesUrl` to
+the deck URL.
+
 ## Tags & description
 
 - `tags`: lowercase kebab topic keywords from the title/event

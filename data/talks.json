@@ -1,98 +1,533 @@
 [
   {
-    "id": "talk-2026-observe-optimize-protect-your-hosted-agents-in-mic",
-    "title": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
-    "event": "Microsoft Foundry",
-    "date": "2026-06-30",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
-    "slidesUrl": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
+    "id": "talk-2010-the-evolution-of-social-search",
+    "title": "The Evolution of Social Search",
+    "event": "NYC Semantic Web Meetup",
+    "date": "2010-03-27",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/the-evolution-of-social-search/3572677",
+    "slidesUrl": "https://www.slideshare.net/slideshow/the-evolution-of-social-search/3572677",
     "videoUrl": null,
-    "description": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
+    "description": "From contextualizing queries on individual trust networks to socializing them on collective wisdom \u2014 how search engines fold in social graphs and real-time data.",
     "tags": [
-      "agents",
-      "microsoft-foundry",
-      "observability"
+      "social-search",
+      "semantic-web"
     ]
   },
   {
-    "id": "talk-2026-efficient-model-customization-with-microsoft-found",
-    "title": "Efficient model customization with Microsoft Foundry - for Agentic AI",
-    "event": "Microsoft Foundry",
-    "date": "2026-01-22",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
-    "slidesUrl": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
+    "id": "talk-2013-angularjs-introduction",
+    "title": "AngularJS Introduction",
+    "event": "NYC GTUG",
+    "date": "2013-02-27",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/angular-js-gtg27feb2013/16837147",
+    "slidesUrl": "https://www.slideshare.net/slideshow/angular-js-gtg27feb2013/16837147",
     "videoUrl": null,
-    "description": "Efficient model customization with Microsoft Foundry - for Agentic AI",
+    "description": "An intro to AngularJS: MVC architecture, declarative views bound to controllers via scopes, directives, filters, services, and dependency injection.",
     "tags": [
-      "agents",
-      "microsoft-foundry",
-      "models"
+      "angularjs",
+      "web",
+      "javascript"
     ]
   },
   {
-    "id": "talk-2025-from-smart-models-to-agent-factories",
-    "title": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
-    "event": "AI Summit NYC",
-    "date": "2025-12-18",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
-    "slidesUrl": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
+    "id": "talk-2013-meteorjs-introduction",
+    "title": "MeteorJS Introduction",
+    "event": "GDG NYC",
+    "date": "2013-09-25",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/meteor-js-gdg25sep2013/26578798",
+    "slidesUrl": "https://www.slideshare.net/slideshow/meteor-js-gdg25sep2013/26578798",
     "videoUrl": null,
-    "description": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
+    "description": "An overview of Meteor: JavaScript across client, server, and database, with reactivity through its publish/subscribe data system.",
     "tags": [
-      "agents",
-      "ai",
+      "meteorjs",
+      "web",
+      "javascript"
+    ]
+  },
+  {
+    "id": "talk-2013-chrome-dev-summit-highlights",
+    "title": "Chrome Dev Summit Highlights (NYC GDG Dec 2013)",
+    "event": "GDG NYC",
+    "date": "2013-12-04",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/mobile-chromeapps-devtoolsgdg4dec2013-29633891/29633891",
+    "slidesUrl": "https://www.slideshare.net/slideshow/mobile-chromeapps-devtoolsgdg4dec2013-29633891/29633891",
+    "videoUrl": null,
+    "description": "Highlights from Chrome Dev Summit 2013: mobile web app development, remote debugging with DevTools for Mobile, and packaging web apps with mobile Chrome Apps + Cordova.",
+    "tags": [
+      "chrome",
+      "mobile-web",
+      "devtools"
+    ]
+  },
+  {
+    "id": "talk-2014-introduction-to-dart",
+    "title": "Introduction to Dart",
+    "event": "GDG NYC",
+    "date": "2014-01-15",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/dart-30704200/30704200",
+    "slidesUrl": "https://www.slideshare.net/slideshow/dart-30704200/30704200",
+    "videoUrl": null,
+    "description": "A Dart flight school: familiar syntax and tooling, running on the standalone VM, dart:io on servers, natively in the browser, or compiled to JavaScript via dart2js.",
+    "tags": [
+      "dart",
+      "web",
+      "javascript"
+    ]
+  },
+  {
+    "id": "talk-2014-from-meteor-to-maker",
+    "title": "From 'Meteor' to 'Maker'",
+    "event": "Meteor NY Meetup",
+    "date": "2014-01-15",
+    "location": "New York, NY",
+    "url": "https://www.slideshare.net/slideshow/meteor-ny-jan2014meteorjs/30097187",
+    "slidesUrl": "https://www.slideshare.net/slideshow/meteor-ny-jan2014meteorjs/30097187",
+    "videoUrl": null,
+    "description": "Building with the Meteor JavaScript framework: full-stack reactivity, client-server interactions, packages, and deployment strategies.",
+    "tags": [
+      "meteorjs",
+      "web",
+      "javascript"
+    ]
+  },
+  {
+    "id": "talk-2017-understanding-your-user-a-dive-into-firebase-ana",
+    "title": "Understanding Your User: A Dive into Firebase Analytics",
+    "event": "DroidCon Boston",
+    "date": "2017-04-10",
+    "location": "Boston, MA",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DroidCon Boston \u00b7 Boston, MA \u00b7 200+ attendees",
+    "tags": [
+      "data",
+      "firebase"
+    ]
+  },
+  {
+    "id": "talk-2017-from-interactions-to-insight-data-driven-develop",
+    "title": "From Interactions to Insight: Data-driven development with Firebase Analytics",
+    "event": "Chicago Roboto",
+    "date": "2017-04-21",
+    "location": "Chicago, IL",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Chicago Roboto \u00b7 Chicago, IL \u00b7 200+ attendees",
+    "tags": [
+      "data",
+      "firebase"
+    ]
+  },
+  {
+    "id": "talk-2017-sorry-not-sorry-from-peer-approval-to-self-appre",
+    "title": "Sorry! Not Sorry: From Peer-Approval to Self-Appreciation",
+    "event": "ElaConf",
+    "date": "2017-10-28",
+    "location": "Philadelphia, PA",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "ElaConf \u00b7 Philadelphia, PA \u00b7 100+ attendees",
+    "tags": [
+      "developer-advocacy"
+    ]
+  },
+  {
+    "id": "talk-2017-pragmatic-machine-learning",
+    "title": "Pragmatic Machine Learning",
+    "event": "DevFest Florida",
+    "date": "2017-11-12",
+    "location": "Orlando, FL",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DevFest Florida \u00b7 Orlando, FL \u00b7 200+ attendees",
+    "tags": [
+      "ml"
+    ]
+  },
+  {
+    "id": "talk-2017-data-on-fire-building-real-time-apps-with-fireba",
+    "title": "Data On Fire: Building real-time apps with Firebase",
+    "event": "DevFest Montreal",
+    "date": "2017-11-18",
+    "location": "Montreal, Canada",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DevFest Montreal \u00b7 Montreal, Canada \u00b7 100+ attendees",
+    "tags": [
+      "firebase",
+      "realtime"
+    ]
+  },
+  {
+    "id": "talk-2018-representation-matters",
+    "title": "Representation Matters",
+    "event": "Togetherfest NY",
+    "date": "2018-04-19",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Togetherfest NY \u00b7 New York, NY \u00b7 200+ attendees",
+    "tags": [
+      "community"
+    ]
+  },
+  {
+    "id": "talk-2018-one-codebase-two-apps-all-flutter",
+    "title": "One Codebase, Two Apps, All Flutter!",
+    "event": "IWD NYC",
+    "date": "2018-04-21",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "IWD NYC \u00b7 New York, NY \u00b7 100+ attendees",
+    "tags": [
+      "flutter"
+    ]
+  },
+  {
+    "id": "talk-2018-representation-matters-rebuilding-a-community",
+    "title": "Representation Matters: Rebuilding a Community",
+    "event": "North America GDG Summit",
+    "date": "2018-05-05",
+    "location": "Mountain View, CA",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "North America GDG Summit \u00b7 Mountain View, CA \u00b7 200+ attendees",
+    "tags": [
+      "community"
+    ]
+  },
+  {
+    "id": "talk-2018-scaling-community-engagement-with-slack-social-m",
+    "title": "Scaling Community Engagement with Slack, Social Media & Storytelling",
+    "event": "Global GDG Summit",
+    "date": "2018-05-07",
+    "location": "Mountain View, CA",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Global GDG Summit \u00b7 Mountain View, CA \u00b7 600+ attendees",
+    "tags": [
+      "community"
+    ]
+  },
+  {
+    "id": "talk-2018-web-components-from-why-to-why-now",
+    "title": "Web Components: From Why to Why Now!",
+    "event": "BuzzJS, NYC",
+    "date": "2018-06-14",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "BuzzJS, NYC \u00b7 New York, NY \u00b7 200+ attendees",
+    "tags": [
+      "web"
+    ]
+  },
+  {
+    "id": "talk-2018-pwas-polymer-let-s-prototype-a-modern-web-app",
+    "title": "PWAs & Polymer: Let's Prototype a Modern Web App",
+    "event": "MongoDB World",
+    "date": "2018-06-26",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "MongoDB World \u00b7 New York, NY \u00b7 2000+ attendees",
+    "tags": [
+      "pwa",
+      "web"
+    ]
+  },
+  {
+    "id": "talk-2018-building-a-performant-cross-platform-mobile-ui-w",
+    "title": "Building a Performant Cross-Platform Mobile UI with Flutter",
+    "event": "O'Reilly OSCON",
+    "date": "2018-07-16",
+    "location": "Portland, OR",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "O'Reilly OSCON \u00b7 Portland, OR \u00b7 5000+ attendees",
+    "tags": [
+      "flutter",
+      "mobile"
+    ]
+  },
+  {
+    "id": "talk-2018-self-care-for-developers-defense-against-the-dar",
+    "title": "(keynote) Self Care For Developers: Defense Against the Dark Arts",
+    "event": "Android Summit",
+    "date": "2018-08-16",
+    "location": null,
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Android Summit \u00b7 200+ attendees",
+    "tags": [
+      "android",
       "keynote",
+      "wellbeing"
+    ]
+  },
+  {
+    "id": "talk-2018-get-animated-with-flutter-2",
+    "title": "Get Animated With Flutter",
+    "event": "DroidCon NYC",
+    "date": "2018-08-27",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DroidCon NYC \u00b7 New York, NY \u00b7 800+ attendees",
+    "tags": [
+      "flutter"
+    ]
+  },
+  {
+    "id": "talk-2018-write-your-first-flutter-app-2-hr-workshop",
+    "title": "Write Your First Flutter App / 2-hr Workshop",
+    "event": "EmpireJS",
+    "date": "2018-09-20",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "EmpireJS \u00b7 New York, NY \u00b7 200 attendees",
+    "tags": [
+      "flutter",
+      "workshop"
+    ]
+  },
+  {
+    "id": "talk-2018-the-pharos-of-pwa-deconstructing-a-lighthouse-au",
+    "title": "The Pharos of PWA: Deconstructing a Lighthouse Audit",
+    "event": "EmpireJS",
+    "date": "2018-09-20",
+    "location": "New York, NY",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "EmpireJS \u00b7 New York, NY",
+    "tags": [
+      "pwa"
+    ]
+  },
+  {
+    "id": "talk-2018-get-animated-with-flutter",
+    "title": "Get Animated With Flutter",
+    "event": "DevFest New Haven",
+    "date": "2018-10-27",
+    "location": "New Haven, CT",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DevFest New Haven \u00b7 New Haven, CT \u00b7 200 attendees",
+    "tags": [
+      "flutter"
+    ]
+  },
+  {
+    "id": "talk-2019-how-it-can-unlock-the-power-of-inclusion",
+    "title": "(moderator) How IT can unlock the power of inclusion",
+    "event": "Microsoft Ignite The Tour",
+    "date": "2019-01-10",
+    "location": "Toronto, ON",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Microsoft Ignite The Tour \u00b7 Toronto, ON",
+    "tags": [
+      "developer-advocacy"
+    ]
+  },
+  {
+    "id": "talk-2019-self-care-for-developers-defense-against-the-dar",
+    "title": "(keynote) Self Care for Developers: Defense Against the Dark Arts",
+    "event": "DevFestFL",
+    "date": "2019-01-19",
+    "location": "Orlando, FL",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "DevFestFL \u00b7 Orlando, FL",
+    "tags": [
+      "keynote",
+      "wellbeing"
+    ]
+  },
+  {
+    "id": "talk-2019-tech-speaking-conferences-strategies",
+    "title": "Tech Speaking: Conferences & Strategies",
+    "event": "Global Diversity CFP Day",
+    "date": "2019-03-02",
+    "location": "San Francisco, CA",
+    "url": "https://sites.google.com/view/nityan-me/advocacy/talks",
+    "slidesUrl": null,
+    "videoUrl": null,
+    "description": "Global Diversity CFP Day \u00b7 San Francisco, CA",
+    "tags": [
+      "developer-advocacy"
+    ]
+  },
+  {
+    "id": "talk-2025-fine-tuning-distillation",
+    "title": "Model Mondays S2E05: Fine Tuning & Distillation",
+    "event": "Model Mondays",
+    "date": "2025-07-14",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
+    "videoUrl": null,
+    "description": "Model Mondays S2E05: Fine Tuning & Distillation",
+    "tags": [
+      "model-mondays",
+      "distillation",
+      "fine-tuning",
       "models"
     ]
   },
   {
-    "id": "talk-2025-continuous-ai-and-agentic-ai-workflows",
-    "title": "Continuous AI and Agentic AI Workflows",
-    "event": "Speaker Deck",
-    "date": "2025-12-18",
+    "id": "talk-2025-research-innovation",
+    "title": "Model Mondays S2E06: Research & Innovation",
+    "event": "Model Mondays",
+    "date": "2025-07-21",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
-    "slidesUrl": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
     "videoUrl": null,
-    "description": "Continuous AI and Agentic AI Workflows",
+    "description": "Model Mondays S2E06: Research & Innovation",
     "tags": [
-      "agents",
-      "ai"
+      "model-mondays",
+      "models"
     ]
   },
   {
-    "id": "talk-2025-learn-how-to-observe-manage-and-scale-agentic-ai-a",
-    "title": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
-    "event": "Microsoft Ignite",
-    "date": "2025-11-21",
+    "id": "talk-2025-ai-assisted-azure-development",
+    "title": "Model Mondays S2E07: AI-Assisted Azure Development",
+    "event": "Model Mondays",
+    "date": "2025-07-28",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
-    "slidesUrl": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
     "videoUrl": null,
-    "description": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
+    "description": "Model Mondays S2E07: AI-Assisted Azure Development",
     "tags": [
+      "model-mondays",
+      "ai",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-on-device-and-local-ai",
+    "title": "Model Mondays S2E08: On-Device and Local AI",
+    "event": "Model Mondays",
+    "date": "2025-08-04",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
+    "videoUrl": null,
+    "description": "Model Mondays S2E08: On-Device and Local AI",
+    "tags": [
+      "model-mondays",
+      "local-ai",
+      "models",
+      "on-device"
+    ]
+  },
+  {
+    "id": "talk-2025-ai-agents",
+    "title": "Model Mondays S2E09: AI Agents",
+    "event": "Model Mondays",
+    "date": "2025-08-11",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
+    "videoUrl": null,
+    "description": "Model Mondays S2E09: AI Agents",
+    "tags": [
+      "model-mondays",
       "agents",
       "ai",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-document-processing",
+    "title": "Model Mondays S2E10: Document Processing",
+    "event": "Model Mondays",
+    "date": "2025-08-22",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
+    "videoUrl": null,
+    "description": "Model Mondays S2E10: Document Processing",
+    "tags": [
+      "model-mondays",
+      "document-processing",
+      "models"
+    ]
+  },
+  {
+    "id": "talk-2025-ai-foundry-speech-playground",
+    "title": "Model Mondays S2E11: AI Foundry Speech Playground",
+    "event": "Model Mondays",
+    "date": "2025-08-25",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
+    "videoUrl": null,
+    "description": "Model Mondays S2E11: AI Foundry Speech Playground",
+    "tags": [
+      "model-mondays",
+      "microsoft-foundry",
+      "models",
+      "speech"
+    ]
+  },
+  {
+    "id": "talk-2025-models-observability",
+    "title": "Model Mondays S2E12: Models & Observability",
+    "event": "Model Mondays",
+    "date": "2025-09-08",
+    "location": null,
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
+    "videoUrl": null,
+    "description": "Model Mondays S2E12: Models & Observability",
+    "tags": [
+      "model-mondays",
+      "models",
       "observability"
     ]
   },
   {
-    "id": "talk-2025-safeguard-your-agents-with-ai-red-teaming-agent-in",
-    "title": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
-    "event": "Microsoft Ignite",
-    "date": "2025-11-21",
+    "id": "talk-2025-open-source-models-hugging-face",
+    "title": "Model Mondays S2E13: Open-Source Models & Hugging Face",
+    "event": "Model Mondays",
+    "date": "2025-09-15",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
-    "slidesUrl": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
+    "url": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
+    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
     "videoUrl": null,
-    "description": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
+    "description": "Model Mondays S2E13: Open-Source Models & Hugging Face",
     "tags": [
-      "agents",
-      "ai-red-teaming",
-      "microsoft-foundry"
+      "model-mondays",
+      "models",
+      "open-source"
     ]
   },
   {
@@ -141,141 +576,99 @@
     ]
   },
   {
-    "id": "talk-2025-open-source-models-hugging-face",
-    "title": "Model Mondays S2E13: Open-Source Models & Hugging Face",
-    "event": "Model Mondays",
-    "date": "2025-09-15",
+    "id": "talk-2025-learn-how-to-observe-manage-and-scale-agentic-ai-a",
+    "title": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
+    "event": "Microsoft Ignite",
+    "date": "2025-11-21",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e13-open-source-models-and-hugging-face",
+    "url": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
+    "slidesUrl": "https://speakerdeck.com/nitya/prel13-learn-how-to-observe-manage-and-scale-agentic-ai-apps-using-azure",
     "videoUrl": null,
-    "description": "Model Mondays S2E13: Open-Source Models & Hugging Face",
+    "description": "PREL13: Learn how to observe, manage, and scale agentic AI apps using Azure",
     "tags": [
-      "models",
-      "open-source"
-    ]
-  },
-  {
-    "id": "talk-2025-models-observability",
-    "title": "Model Mondays S2E12: Models & Observability",
-    "event": "Model Mondays",
-    "date": "2025-09-08",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e12-models-and-observability",
-    "videoUrl": null,
-    "description": "Model Mondays S2E12: Models & Observability",
-    "tags": [
-      "models",
+      "agents",
+      "ai",
       "observability"
     ]
   },
   {
-    "id": "talk-2025-ai-foundry-speech-playground",
-    "title": "Model Mondays S2E11: AI Foundry Speech Playground",
-    "event": "Model Mondays",
-    "date": "2025-08-25",
+    "id": "talk-2025-safeguard-your-agents-with-ai-red-teaming-agent-in",
+    "title": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
+    "event": "Microsoft Ignite",
+    "date": "2025-11-21",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e11-ai-foundry-speech-playground",
+    "url": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/msignite-lab-516-safeguard-your-agents-with-ai-red-teaming-agent-in-microsoft-foundry",
     "videoUrl": null,
-    "description": "Model Mondays S2E11: AI Foundry Speech Playground",
+    "description": "MSIgnite Lab 516: Safeguard your agents with AI Red Teaming Agent in Microsoft Foundry",
     "tags": [
-      "microsoft-foundry",
-      "models",
-      "speech"
+      "agents",
+      "ai-red-teaming",
+      "microsoft-foundry"
     ]
   },
   {
-    "id": "talk-2025-document-processing",
-    "title": "Model Mondays S2E10: Document Processing",
-    "event": "Model Mondays",
-    "date": "2025-08-22",
+    "id": "talk-2025-from-smart-models-to-agent-factories",
+    "title": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
+    "event": "AI Summit NYC",
+    "date": "2025-12-18",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e10-document-processing",
+    "url": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
+    "slidesUrl": "https://speakerdeck.com/nitya/ai-summit-nyc-2025-keynote-from-smart-models-to-agent-factories",
     "videoUrl": null,
-    "description": "Model Mondays S2E10: Document Processing",
-    "tags": [
-      "document-processing",
-      "models"
-    ]
-  },
-  {
-    "id": "talk-2025-ai-agents",
-    "title": "Model Mondays S2E09: AI Agents",
-    "event": "Model Mondays",
-    "date": "2025-08-11",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e09-ai-agents",
-    "videoUrl": null,
-    "description": "Model Mondays S2E09: AI Agents",
+    "description": "AI Summit NYC 2025 Keynote: From Smart Models to Agent Factories",
     "tags": [
       "agents",
       "ai",
+      "keynote",
       "models"
     ]
   },
   {
-    "id": "talk-2025-on-device-and-local-ai",
-    "title": "Model Mondays S2E08: On-Device and Local AI",
-    "event": "Model Mondays",
-    "date": "2025-08-04",
+    "id": "talk-2025-continuous-ai-and-agentic-ai-workflows",
+    "title": "Continuous AI and Agentic AI Workflows",
+    "event": "Speaker Deck",
+    "date": "2025-12-18",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e08-on-device-and-local-ai",
+    "url": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
+    "slidesUrl": "https://speakerdeck.com/nitya/continuous-ai-and-agentic-ai-workflows",
     "videoUrl": null,
-    "description": "Model Mondays S2E08: On-Device and Local AI",
+    "description": "Continuous AI and Agentic AI Workflows",
     "tags": [
-      "local-ai",
-      "models",
-      "on-device"
+      "agents",
+      "ai"
     ]
   },
   {
-    "id": "talk-2025-ai-assisted-azure-development",
-    "title": "Model Mondays S2E07: AI-Assisted Azure Development",
-    "event": "Model Mondays",
-    "date": "2025-07-28",
+    "id": "talk-2026-efficient-model-customization-with-microsoft-found",
+    "title": "Efficient model customization with Microsoft Foundry - for Agentic AI",
+    "event": "Microsoft Foundry",
+    "date": "2026-01-22",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e07-ai-assisted-azure-development-dd9b8e9e-de8f-45ad-ba0b-beaa3001e507",
+    "url": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
+    "slidesUrl": "https://speakerdeck.com/nitya/efficient-model-customization-with-microsoft-foundry-for-agentic-ai",
     "videoUrl": null,
-    "description": "Model Mondays S2E07: AI-Assisted Azure Development",
+    "description": "Efficient model customization with Microsoft Foundry - for Agentic AI",
     "tags": [
-      "ai",
+      "agents",
+      "microsoft-foundry",
       "models"
     ]
   },
   {
-    "id": "talk-2025-research-innovation",
-    "title": "Model Mondays S2E06: Research & Innovation",
-    "event": "Model Mondays",
-    "date": "2025-07-21",
+    "id": "talk-2026-observe-optimize-protect-your-hosted-agents-in-mic",
+    "title": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
+    "event": "Microsoft Foundry",
+    "date": "2026-06-30",
     "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e06-research-and-innovation",
+    "url": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
+    "slidesUrl": "https://speakerdeck.com/nitya/observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry",
     "videoUrl": null,
-    "description": "Model Mondays S2E06: Research & Innovation",
+    "description": "Observe, optimize & protect your hosted agents in Microsoft Foundry",
     "tags": [
-      "models"
-    ]
-  },
-  {
-    "id": "talk-2025-fine-tuning-distillation",
-    "title": "Model Mondays S2E05: Fine Tuning & Distillation",
-    "event": "Model Mondays",
-    "date": "2025-07-14",
-    "location": null,
-    "url": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
-    "slidesUrl": "https://speakerdeck.com/nitya/model-mondays-s2e05-fine-tuning-and-distillation",
-    "videoUrl": null,
-    "description": "Model Mondays S2E05: Fine Tuning & Distillation",
-    "tags": [
-      "distillation",
-      "fine-tuning",
-      "models"
+      "agents",
+      "microsoft-foundry",
+      "observability"
     ]
   }
 ]

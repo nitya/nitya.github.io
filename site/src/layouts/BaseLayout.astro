@@ -2,6 +2,7 @@
 import "../styles/theme.css";
 import SEO from "../components/SEO.astro";
 import Nav from "../components/Nav.astro";
+import Banner from "../components/Banner.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import { profile } from "../lib/profile.ts";
 
@@ -36,6 +37,7 @@ const year = new Date().getFullYear();
     </script>
   </head>
   <body>
+    <Banner />
     <Nav>
       <ThemeToggle />
     </Nav>

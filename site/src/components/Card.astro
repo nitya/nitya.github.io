@@ -92,16 +92,16 @@ const dateLabel = item.date ? new Date(item.date).getFullYear() : "";
     padding-top: 0.5rem;
   }
   .tag {
-    color: var(--brand-2);
+    color: var(--accent-2);
     font-size: 0.78rem;
     font-weight: 600;
   }
   .type-patent {
-    background: color-mix(in srgb, var(--gold) 22%, transparent);
-    color: color-mix(in srgb, var(--gold) 78%, #000);
+    background: var(--badge-patent-bg);
+    color: var(--badge-patent-fg);
   }
   .type-talk {
-    background: color-mix(in srgb, var(--blue) 18%, transparent);
-    color: var(--blue);
+    background: var(--badge-talk-bg);
+    color: var(--badge-talk-fg);
   }
 </style>

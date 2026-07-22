@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 // can render one uniform card per item while preserving the source type.
 export interface ContentItem {
   key: string;
-  type: "patent" | "publication" | "talk" | "project";
+  type: "patent" | "publication" | "talk" | "project" | "training";
   title: string;
   description: string;
   date: string | null;
@@ -19,6 +19,7 @@ const typeLabels: Record<ContentItem["type"], string> = {
   publication: "Publication",
   talk: "Talk",
   project: "Project",
+  training: "Training",
 };
 
 export function typeLabel(type: ContentItem["type"]): string {
@@ -27,11 +28,12 @@ export function typeLabel(type: ContentItem["type"]): string {
 
 // Load every collection and normalize into a single, sortable list.
 export async function getAllContentItems(): Promise<ContentItem[]> {
-  const [patents, publications, talks, projects] = await Promise.all([
+  const [patents, publications, talks, projects, training] = await Promise.all([
     getCollection("patents"),
     getCollection("publications"),
     getCollection("talks"),
     getCollection("projects"),
+    getCollection("training"),
   ]);
 
   const items: ContentItem[] = [];
@@ -89,6 +91,20 @@ export async function getAllContentItems(): Promise<ContentItem[]> {
       tags: pr.data.tags,
       source: pr.data.role ?? "Project",
       meta: pr.data.status,
+    });
+  }
+
+  for (const tr of training) {
+    items.push({
+      key: `training:${tr.id}`,
+      type: "training",
+      title: tr.data.title,
+      description: tr.data.description,
+      date: tr.data.date ?? null,
+      url: tr.data.url,
+      tags: tr.data.tags,
+      source: tr.data.program ?? "Training",
+      meta: tr.data.program ?? "Training",
     });
   }
 

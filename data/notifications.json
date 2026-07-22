@@ -1,0 +1,12 @@
+[
+  {
+    "id": "wip-2026",
+    "active": true,
+    "type": "warning",
+    "message": "🚧 This site is a work in progress — content and data are still being added and refined.",
+    "link": null,
+    "dismissible": true,
+    "startDate": null,
+    "endDate": null
+  }
+]
