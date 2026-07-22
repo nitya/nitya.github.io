@@ -1,14 +1,32 @@
-# Nitya Narasimhan, PhD — Personal Knowledge Platform
+<!-- prettier-ignore -->
+<div align="center">
 
-[![Deploy to GitHub Pages](https://github.com/nitya/nitya.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/nitya/nitya.github.io/actions/workflows/deploy.yml)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nitya/nitya.github.io)
+<img src="./site/public/favicon.svg" alt="Nitya Narasimhan logo" width="110" />
 
-A **data-first personal knowledge platform** for my personal and professional
-content. Structured data in [`data/`](./data) is the single source of truth;
-everything else is a *view* of it. **Live site: https://nitya.github.io**
+# Nitya Narasimhan, PhD
 
-## Three goals
+*A data-first personal knowledge platform — structured data as source of truth, the website as human-first view, agents are first-class citizens.*
 
+[![Deploy to GitHub Pages](https://img.shields.io/github/actions/workflow/status/nitya/nitya.github.io/deploy.yml?branch=main&label=deploy&style=flat-square)](https://github.com/nitya/nitya.github.io/actions/workflows/deploy.yml) &nbsp;
+[![Live site](https://img.shields.io/website?url=https%3A%2F%2Fnitya.github.io&label=website&style=flat-square)](https://nitya.github.io) &nbsp;
+[![Built with Astro](https://img.shields.io/badge/built%20with-Astro-ff5d01?style=flat-square&logo=astro&logoColor=white)](https://astro.build) &nbsp;
+[![Open in Codespaces](https://img.shields.io/badge/Codespaces-open-24292e?style=flat-square&logo=github&logoColor=white)](https://codespaces.new/nitya/nitya.github.io)
+
+---
+
+[Live site](https://nitya.github.io) • [Overview](#overview) • [Data model](#data-model) • [Website](#human-experience--the-website) • [Agents](#agent-experience) • [Getting started](#getting-started)
+
+</div>
+
+<br/>
+
+## Overview
+
+Structured data in [`data/`](./data) is the single source of truth for my
+personal and professional content; everything else — the website, the SEO
+metadata, the agent tooling — is a *view* of it.
+
+### Outcomes 
 1. **Personal knowledge platform** — a centralized, structured, queryable record
    of my content and profile (patents, publications, talks, projects, training,
    and more), each backed by a schema aligned to a canonical external source.
@@ -40,8 +58,10 @@ information, and maps to a [schema.org](https://schema.org) type for SEO.
 | `data/training.json` | Curricula & 1P-event training content | GitHub repos → `Course` |
 | `data/notifications.json` | Data-driven site banners (e.g. WIP notice) | — |
 
-The [Astro content-layer schemas](./site/src/content.config.ts) (Zod) validate
+> The [Astro content-layer schemas](./site/src/content.config.ts) (Zod) validate
 every file at build time — **an invalid `data/*.json` fails the build.**
+
+<br/>
 
 ## Human experience — the website
 
